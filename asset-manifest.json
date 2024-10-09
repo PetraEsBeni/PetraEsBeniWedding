@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/PetraEsBeni/static/css/main.f855e6bc.css",
+    "main.js": "/PetraEsBeni/static/js/main.63217a99.js",
+    "static/js/453.7e3e3be8.chunk.js": "/PetraEsBeni/static/js/453.7e3e3be8.chunk.js",
+    "static/media/logo.svg": "/PetraEsBeni/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/PetraEsBeni/index.html",
+    "main.f855e6bc.css.map": "/PetraEsBeni/static/css/main.f855e6bc.css.map",
+    "main.63217a99.js.map": "/PetraEsBeni/static/js/main.63217a99.js.map",
+    "453.7e3e3be8.chunk.js.map": "/PetraEsBeni/static/js/453.7e3e3be8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.63217a99.js"
+  ]
+}
