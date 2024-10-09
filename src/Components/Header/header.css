@@ -1,0 +1,32 @@
+ /* Kép háttér */
+ .image-section {
+    position: relative;
+    height: 400px; /* 15 cm */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Kép stílus */
+.background-image {
+    position: absolute;
+    top: 50%; /* Kép középre helyezése */
+    left: 50%; /* Kép középre helyezése */
+    transform: translate(-50%, -50%); /* Kép középre helyezése */
+    width: auto;
+    height: 100%; /* Teljes magasság */
+    opacity: 0.5; /* Átlátszóság */
+}
+
+/* Szöveg az animáció felett */
+.text-overlay {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: black;
+    font-size: 36px;
+    text-align: center;
+    z-index: 2; /* Szöveg a kép fölött */
+}
