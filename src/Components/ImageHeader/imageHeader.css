@@ -1,3 +1,13 @@
+.container {
+    display: flex; /* Flexbox aktiválása */
+    justify-content: center; /* Középre igazítás vízszintesen */
+    align-items: center; /* Középre igazítás függőlegesen */
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Teljes magasság */
+    overflow: hidden;
+}
+ 
  /* Kép háttér */
  .image-section {
     position: relative;
@@ -10,24 +20,24 @@
 
 /* Kép stílus */
 .background-image {
-    position: relative;
-    top: 70%;
     width: 100%;
-    opacity: 0.5;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    object-position: 50% 20%;
+    left: 0;
 }
 
 /* Szöveg az animáció felett */
 .text-overlay {
-    position: absolute;
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%); 
+    position: relative;
     background-color: rgba(250, 250, 250, 0.726); /* Fekete háttér áttetszően */
     color: rgb(218, 163, 25);
     padding: 20px; 
     border-radius: 8px;
     text-align: center; 
     border: 2px solid rgb(218, 163, 25);
+    z-index: 1;
 }
 
 .PetraAndBeni{

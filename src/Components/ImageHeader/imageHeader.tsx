@@ -5,10 +5,8 @@ import myImage from "./first.jpg"
 export class ImageHeader extends React.Component {
     public render(){
         return (
-            <td>
-                <div className="image-section">
-                    <img src={myImage} alt="Hátterkép" className="background-image"/>
-                </div>
+            <td className="container">
+                <img src={myImage} alt="Hátterkép" className="background-image"/>
                 <div className="text-overlay">
                     <h1 className="PetraAndBeni">Petra és Beni</h1>
                     <p className="Osszehazasodunk">Összeházasodunk!</p>
