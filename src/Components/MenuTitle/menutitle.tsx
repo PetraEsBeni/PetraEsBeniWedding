@@ -1,7 +1,7 @@
 import React from "react";
 import "./menutitle.css";
 
-export class MenuTitle {
+export class MenuTitle extends React.Component {
     public render(){
         return (
             <div className="header">

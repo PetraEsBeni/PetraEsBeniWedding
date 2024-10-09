@@ -1,15 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import { ImageHeader } from './Components/ImageHeader/imageHeader';
 import { MenuTitle } from './Components/MenuTitle/menutitle';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
       <MenuTitle/>
-      <Header/>
-      
+      <ImageHeader/>
+
     </div>
-  );
-}
+    );
+  };
 
 export default App;

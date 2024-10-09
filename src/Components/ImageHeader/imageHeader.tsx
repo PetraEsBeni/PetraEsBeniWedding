@@ -1,7 +1,7 @@
 import React from "react";
-import "./header.css";
+import "./imageHeader.css";
 
-export class Header {
+export class ImageHeader extends React.Component {
     public render(){
         return (
             <div>
