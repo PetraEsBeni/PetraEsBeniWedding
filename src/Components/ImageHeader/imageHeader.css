@@ -1,7 +1,7 @@
  /* Kép háttér */
  .image-section {
     position: relative;
-    height: 400px; /* 15 cm */
+    height: 600px; /* 15 cm */
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -10,13 +10,10 @@
 
 /* Kép stílus */
 .background-image {
-    position: absolute;
-    top: 50%; /* Kép középre helyezése */
-    left: 50%; /* Kép középre helyezése */
-    transform: translate(-50%, -50%); /* Kép középre helyezése */
-    width: auto;
-    height: 100%; /* Teljes magasság */
-    opacity: 0.5; /* Átlátszóság */
+    position: relative;
+    top: 70%;
+    width: 100%;
+    opacity: 0.5;
 }
 
 /* Szöveg az animáció felett */
@@ -25,8 +22,26 @@
     top: 50%; 
     left: 50%;
     transform: translate(-50%, -50%); 
-    color: black;
-    font-size: 36px;
-    text-align: center;
-    z-index: 2; /* Szöveg a kép fölött */
+    background-color: rgba(250, 250, 250, 0.726); /* Fekete háttér áttetszően */
+    color: rgb(218, 163, 25);
+    padding: 20px; 
+    border-radius: 8px;
+    text-align: center; 
+    border: 2px solid rgb(218, 163, 25);
+}
+
+.PetraAndBeni{
+    font-family: 'Dancing Script', cursive;
+}
+
+.Osszehazasodunk {
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    padding: 10px 60px 10px 60px;
+    border-bottom: 2px solid rgb(218, 163, 25);
+}
+
+.Datum{
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
 }

@@ -6,7 +6,13 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <MenuTitle/>
-      <ImageHeader/>
+      <table className='table'>
+        <tbody>
+          <tr>
+            <ImageHeader/>
+          </tr>
+        </tbody>
+      </table>
 
     </div>
     );

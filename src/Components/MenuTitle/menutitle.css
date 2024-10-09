@@ -13,11 +13,18 @@
 }
 
 .button {
-    background-color: white;
-    color: black;
-    border: none;
+    background-color: rgba(61, 55, 55, 0.842);
+    color: rgb(218, 163, 25);
+    border: 1px solid rgb(218, 163, 25);
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-    margin-left: auto; 
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.title{
+    flex: auto;
+    font-family: emoji;
+    font-size: x-large;
 }
