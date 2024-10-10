@@ -1,12 +1,13 @@
 import React from "react";
 import "./imageHeader.css";
-import myImage from "./first.jpg"
+import Carousel from "./Carousel";
 
 export class ImageHeader extends React.Component {
     public render(){
         return (
             <td className="container">
-                <img src={myImage} alt="Hátterkép" className="background-image"/>
+               {/* <img src={myImage} alt="Hátterkép" className="background-image"/>*/}
+               <Carousel/>
                 <div className="text-overlay">
                     <h1 className="PetraAndBeni">Petra és Beni</h1>
                     <p className="Osszehazasodunk">Összeházasodunk!</p>

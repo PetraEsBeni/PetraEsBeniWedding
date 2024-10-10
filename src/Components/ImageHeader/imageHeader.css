@@ -7,16 +7,38 @@
     height: 100vh; /* Teljes magasság */
     overflow: hidden;
 }
- 
- /* Kép háttér */
- .image-section {
-    position: relative;
-    height: 600px; /* 15 cm */
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.carousel-container {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    object-position: 50% 20%;
+    left: 0;
+  }
+  
+  @keyframes slide {
+    from {
+        transform: translateX(0%);
+      }
+      to {
+        transform: translateX(-100%);
+      }
 }
+
+.carousel-wrapper {
+    display: flex;
+    animation: slide 40s linear infinite; 
+    width: 300%;
+}
+  
+  .carousel-slide {
+    min-width: 33.33%;
+    height: 100vh; /* Beállíthatod a magasságot */
+    background-size: cover; /* A háttérkép kitöltése */
+    background-position: 50% 20%; 
+    animation: none;
+  }
 
 /* Kép stílus */
 .background-image {
