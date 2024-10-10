@@ -1,0 +1,51 @@
+.countdown {
+    height: 100%;
+    color: #da9325;
+    background-color: #f0f0f0;
+}
+
+.countdown-title {
+    font-family: 'Dancing Script', cursive;
+    padding: 20px;
+    font-size: xxx-large;
+    height: 100%;
+    color: #da9325;
+}
+
+.counter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #f0f0f0;
+    padding: 30px;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+}
+
+.time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(250, 250, 250, 0.9);
+    border: 2px solid #da9325;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100px;
+    margin: 0px 10px 0px 10px;
+    height: 60px;
+}
+
+.time-box p {
+    font-size: 2rem;
+    margin: 0;
+    color: #da9325;
+}
+
+.time-box span {
+        color: #da9325;
+    font-size: 1rem;
+}

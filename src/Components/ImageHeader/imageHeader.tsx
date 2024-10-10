@@ -1,6 +1,6 @@
 import React from "react";
 import "./imageHeader.css";
-import Carousel from "./Carousel";
+import { Carousel } from "./Carousel";
 
 export class ImageHeader extends React.Component {
     public render(){

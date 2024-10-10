@@ -1,4 +1,5 @@
 import './App.css';
+import { CountDown } from './Components/CountDown/CountDown';
 import { ImageHeader } from './Components/ImageHeader/imageHeader';
 import { MenuTitle } from './Components/MenuTitle/menutitle';
 
@@ -10,6 +11,7 @@ const App: React.FC = () => {
         <tbody>
           <tr>
             <ImageHeader/>
+            <CountDown/>
           </tr>
         </tbody>
       </table>
