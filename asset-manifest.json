@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/PetraEsBeniWedding/static/css/main.caefa423.css",
+    "main.css": "/PetraEsBeniWedding/static/css/main.d48e0796.css",
     "main.js": "/PetraEsBeniWedding/static/js/main.bb161118.js",
     "static/js/453.7e3e3be8.chunk.js": "/PetraEsBeniWedding/static/js/453.7e3e3be8.chunk.js",
     "static/media/first.jpg": "/PetraEsBeniWedding/static/media/first.65ea64ba06e89acab4ce.jpg",
     "static/media/second.jpg": "/PetraEsBeniWedding/static/media/second.c6993b1a1b6ec8c049fa.jpg",
     "static/media/third.jpg": "/PetraEsBeniWedding/static/media/third.550c718bad14f05cef58.jpg",
     "index.html": "/PetraEsBeniWedding/index.html",
-    "main.caefa423.css.map": "/PetraEsBeniWedding/static/css/main.caefa423.css.map",
+    "main.d48e0796.css.map": "/PetraEsBeniWedding/static/css/main.d48e0796.css.map",
     "main.bb161118.js.map": "/PetraEsBeniWedding/static/js/main.bb161118.js.map",
     "453.7e3e3be8.chunk.js.map": "/PetraEsBeniWedding/static/js/453.7e3e3be8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.caefa423.css",
+    "static/css/main.d48e0796.css",
     "static/js/main.bb161118.js"
   ]
 }
