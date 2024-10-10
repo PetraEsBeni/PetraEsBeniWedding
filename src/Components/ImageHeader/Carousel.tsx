@@ -56,7 +56,7 @@ const Carousel: React.FC = () => {
     return (
         <div className="carousel-container" ref={outerRef}>
         <div className="carousel-wrapper" ref={innerRef}>
-          {images.map((image, index) => (
+          {images.concat(images).map((image, index) => (
             <div
               className="carousel-slide"
               key={index}
