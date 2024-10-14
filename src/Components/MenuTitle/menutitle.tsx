@@ -6,7 +6,7 @@ export class MenuTitle extends React.Component {
         return (
             <div className="header">
                 <span className="title">Petra & Beni</span>
-                <button className="button">Gomb</button>
+                {/*<button className="button">Gomb</button>*/}
             </div>
         )
     }

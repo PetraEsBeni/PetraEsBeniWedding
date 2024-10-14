@@ -50,7 +50,7 @@ export class CountDown extends React.Component<{}, IState>{
         const { days, hours, minutes, seconds } = this.state;
     
         return (
-            <div className="countdown">
+            <td className="countdown">
                 <div className="countdown-title">Visszaszámlálás</div>
                 <div className="counter-container">
                     <div className="time">
@@ -72,7 +72,7 @@ export class CountDown extends React.Component<{}, IState>{
                         </div>
                     </div>
                 </div>
-            </div>
+            </td>
         );
       }
 }

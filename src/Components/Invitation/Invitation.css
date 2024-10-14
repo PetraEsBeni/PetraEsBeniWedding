@@ -1,0 +1,33 @@
+.invitation-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    color: #da9325;
+    height: 100%;
+    align-items: center;
+}
+
+.invitation-title {
+    font-family: 'Dancing Script', cursive;
+    padding: 20px;
+    font-size: xxx-large;
+    height: 100%;
+    color: #da9325;
+}
+
+.invitation-subtitle {
+    padding: 20px;
+    font-size: large;
+    height: 100%;
+    color: #da9325;
+}
+
+.feedback-button {
+    background-color: rgba(61, 55, 55, 0.842);
+    color: rgb(218, 163, 25);
+    border: 1px solid rgb(218, 163, 25);
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 15px;
+    border-radius: 5px;
+}
