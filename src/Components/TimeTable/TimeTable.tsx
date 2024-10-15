@@ -1,7 +1,7 @@
 import React from "react";
 import "./TimeTable.css";
 
-export class TimeTable extends React.Component{
+export class TimeTable extends React.Component {
     private events = [
         { time: "5:45 - 6:15 P.M.", event: "Ceremony", icon: "💍" },
         { time: "7:00 - 7:15 P.M.", event: "Sunset Photos", icon: "📷" },
@@ -13,18 +13,57 @@ export class TimeTable extends React.Component{
 
     public render() {
         return (
-            <td className="timeline">
-            {this.events.map((event, index) => (
-                <div key={index}>
-                    <div key={`${index}-dot`} className="dot"></div>
-                    <div key={`${index}-event`} className={`timeline-event ${index % 2 === 0 ? "left" : "right"}`}>
-                        <div className="timeline-time">{event.time}</div>
-                        <div className="timeline-icon">{event.icon}</div>
-                        <div className="timeline-event-name">{event.event}</div>
-                    </div>
+            <td className="timeline-container">
+                <div className="timeline-title">Menetrend</div>
+                <div className="timeline">
+                    <table className="events-table">
+                        <tbody className="events-table-body">
+                            {this.events.map((event, index) => (
+                                /*<div key={index}>
+                                    <div key={`${index}-dot`} className="dot"></div>
+                                    <div key={`${index}-event`} className={`timeline-event ${index % 2 === 0 ? "left" : "right"}`}>
+                                        <div className="timeline-time">{event.time}</div>
+                                        <div className="timeline-icon">{event.icon}</div>
+                                        <div className="timeline-event-name">{event.event}</div>
+                                    </div>
+                                </div>*/
+                                <tr className="events-row">
+                                    {index % 2 === 0 ?
+                                        <>
+                                            <td className="events-column leftEvent">
+                                                <div key={`${index}-event`}>
+                                                    <div className="timeline-event">{event.time}</div>
+                                                    <div className="timeline-icon">{event.icon}</div>
+                                                    <div className="timeline-event-name">{event.event}</div>
+                                                </div>
+                                            </td>
+                                            <td className="events-column">
+                                                <div key={`${index}-dot`} className="dot"></div>
+                                            </td>
+                                            <td className="events-column"></td>
+                                        </>
+                                        :
+                                        <>
+                                            <td className="events-column"></td>
+                                            <td className="events-column">
+                                                <div key={`${index}-dot`} className="dot"></div>
+                                            </td>
+                                            <td className="events-column rightEvent">
+                                                <div key={`${index}-event`}>
+                                                    <div className="timeline-event">{event.time}</div>
+                                                    <div className="timeline-icon">{event.icon}</div>
+                                                    <div className="timeline-event-name">{event.event}</div>
+                                                </div>
+                                            </td>
+                                        </>}
+
+                                </tr>
+
+                            ))}
+                        </tbody>
+                    </table>
                 </div>
-            ))}
-          </td>
+            </td>
         )
     }
 }

@@ -14,8 +14,8 @@ const App: React.FC = () => {
           <tr>
             <ImageHeader/>
             <CountDown/>
-           {/* <Invitation/> */}
-            {/* <TimeTable/> */}
+            {/*<Invitation/> */}
+             {/*<TimeTable/> */}
           </tr>
         </tbody>
       </table>
