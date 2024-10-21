@@ -1,5 +1,6 @@
 import './App.css';
 import { CountDown } from './Components/CountDown/CountDown';
+import { Feedback } from './Components/Feedback/Feedback';
 import { ImageHeader } from './Components/ImageHeader/imageHeader';
 import { Invitation } from './Components/Invitation/Invitation';
 import { MenuTitle } from './Components/MenuTitle/menutitle';
@@ -14,8 +15,9 @@ const App: React.FC = () => {
           <tr>
             <ImageHeader/>
             <CountDown/>
-            <Invitation/> 
+            {/*<Invitation/> 
             <TimeTable/> 
+            <Feedback/>*/}
           </tr>
         </tbody>
       </table>

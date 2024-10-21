@@ -19,14 +19,6 @@ export class TimeTable extends React.Component {
                     <table className="events-table">
                         <tbody className="events-table-body">
                             {this.events.map((event, index) => (
-                                /*<div key={index}>
-                                    <div key={`${index}-dot`} className="dot"></div>
-                                    <div key={`${index}-event`} className={`timeline-event ${index % 2 === 0 ? "left" : "right"}`}>
-                                        <div className="timeline-time">{event.time}</div>
-                                        <div className="timeline-icon">{event.icon}</div>
-                                        <div className="timeline-event-name">{event.event}</div>
-                                    </div>
-                                </div>*/
                                 <tr className="events-row">
                                     {index % 2 === 0 ?
                                         <>

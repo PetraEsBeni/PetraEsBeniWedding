@@ -1,0 +1,47 @@
+.feedback-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    color: #da9325;
+    height: 100%;
+    align-items: center;
+}
+
+.feedback-title {
+    font-family: 'Dancing Script', cursive;
+    padding: 20px;
+    font-size: xxx-large;
+    height: 100%;
+    color: #da9325;
+}
+
+.children-container {
+    display: flex;
+}
+
+.children-label {
+    margin-right: 5px;
+}
+
+.children-age {
+    width: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #f0f0f0;
+}
+
+.children-name {
+    background-color: #f0f0f0;
+}
+
+.children-button {
+    border: 0px;
+}
+
+.children-delete-icon {
+    color: red;
+}
+
+.children-add-icon {
+    color: green;
+}
