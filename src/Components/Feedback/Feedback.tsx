@@ -52,8 +52,8 @@ export class Feedback extends React.Component<{}, IState> {
                     <div className="children-container">
                         <label className="children-label">Gyerekek: </label>
                         {this.state.children.length === 0 ?
-                            <button type="button" onClick={this.addChild}>
-                                Gyerek hozzáadása
+                            <button className="children-button" type="button" onClick={this.addChild}>
+                                <FontAwesomeIcon icon={faPlus} />
                             </button> :
                             <>
                                 {this.state.children.map((child, index) => (
@@ -87,7 +87,7 @@ export class Feedback extends React.Component<{}, IState> {
                     </div>
 
                     <div>
-                        <button type="submit">Küldés</button>
+                        <button type="submit">Visszajelzés küldése</button>
                     </div>
                 </form>
             </td>
