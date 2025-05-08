@@ -1,7 +1,11 @@
 import React from "react";
 import "./Invitation.css";
 
-export class Invitation extends React.Component {
+interface InvitationProps {
+    onScrollToFeedback: () => void;
+}
+
+export class Invitation extends React.Component<InvitationProps> {
     public render(){
         return (
             <td className="invitation-container">
@@ -16,7 +20,7 @@ export class Invitation extends React.Component {
                 <div className="invitation-subtitle">Nászajándék</div>
                 <div>Fent a pántos légkör öblén szálldosnak a brengizők, miközben a csurrogó hantipálma levelein pihen a harmat. 
                 A mantusz szél süvítve tör előre, átsiklik az égpalánkon, ahol a zengő csermely habjai halk dallamot visznek tovább. </div>
-                <button className="feedback-button">Visszajelzés</button>
+                <button className="feedback-button" onClick={this.props.onScrollToFeedback}>Visszajelzés</button>
             </td>
         )
     }

@@ -37,8 +37,12 @@
     margin-left: 9%;
 }
 
+.add-children {
+    display: flex;
+    margin: 10px 0px;
+}
+
 .children-age {
-    width: 20%;
     margin-left: 5px;
     margin-right: 5px;
     border-width: 1px;
@@ -52,6 +56,7 @@
     border: 0px;
     padding-top: 3px;
     padding: 3px 7px 2px 2px;
+    width: 90%;
     font-size: medium;
 }
 
@@ -69,4 +74,33 @@
 
 .children-add-icon {
     color: green;
+}
+
+.feedback-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Átlátszó háttér */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Biztosítja, hogy a modal előtérben legyen */
+}
+
+.feedback-modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.success-message {
+    font-size: 18px;
+    font-weight: bold;
+    color:  #3a3838e8;
+    text-align: center;
 }
