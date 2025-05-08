@@ -2,6 +2,7 @@ import React from "react";
 import './Feedback.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
+import emailjs from 'emailjs-com';
 
 export interface Child {
     name: string;
@@ -29,9 +30,9 @@ export class Feedback extends React.Component<{}, IState> {
         return (
             <td className="feedback-container">
                 <div className="feedback-title">Visszajelzés</div>{/*sok szeretettel meghívunk esküvőnkre*/}
-                <form onSubmit={this.handleSubmit}>
-                    <div>
-                        <label>Név: </label>
+                <form onSubmit={this.handleSubmit} className="feedback-form">
+                    <div className="feedback-input-container">
+                        <label className="feedback-label">Név: </label>
                         <input
                             type="text"
                             value={this.state.name}
@@ -40,8 +41,8 @@ export class Feedback extends React.Component<{}, IState> {
                         />
                     </div>
 
-                    <div>
-                        <label>Pár neve (opcionális): </label>
+                    <div className="feedback-input-container">
+                        <label className="feedback-label">Pár neve (opcionális): </label>
                         <input
                             type="text"
                             value={this.state.partnerName}
@@ -49,10 +50,10 @@ export class Feedback extends React.Component<{}, IState> {
                         />
                     </div>
 
-                    <div className="children-container">
-                        <label className="children-label">Gyerekek: </label>
+                    <div className="feedback-input-container feedback-child-input">
+                        <label className="feedback-label">Gyerekek: </label>
                         {this.state.children.length === 0 ?
-                            <button type="button" onClick={this.addChild}>
+                            <button className="add-children-button" type="button" onClick={this.addChild}>
                                 Gyerek hozzáadása
                             </button> :
                             <>
@@ -94,7 +95,6 @@ export class Feedback extends React.Component<{}, IState> {
         )
     }
 
-    // Gyerek hozzáadása
     private addChild = () => {
         var tempChildren = [...this.state.children];
         tempChildren.push({ name: "", age: "" });
@@ -104,7 +104,6 @@ export class Feedback extends React.Component<{}, IState> {
         });
     };
 
-    // Gyerek adatainak kezelése
     private handleChildNameChange = (index: number, value: string) => {
         var newChildren: Child[] = [...this.state.children];
         newChildren[index].name = value;
@@ -123,7 +122,6 @@ export class Feedback extends React.Component<{}, IState> {
         });
     };
 
-    // Gyerek eltávolítása
     private removeChild = (index: number) => {
         const newChildren = this.state.children.filter((_, i) => i !== index);
         this.setState({
@@ -134,7 +132,34 @@ export class Feedback extends React.Component<{}, IState> {
     // Form küldése
     private handleSubmit = (event: any) => {
         event.preventDefault();
-        // Form adatok feldolgozása (pl. küldés szerverre)
+        emailjs.init('ZCVVbW_74u-qXVJRl');
+
+        const partner = this.state.partnerName ? this.state.partnerName : "-";
+        var children = "";
+        for(var child of this.state.children){
+            const childData = "Név: " + child.name + ", Kor: " + child.age + "\n" ;
+            children += childData;
+        }
+
+        const emailContent = `
+        Visszajelző neve: ${this.state.name}
+        Visszajelző párja: ${partner}
+        Gyerekek:\n ${children}
+      `;
+
+        emailjs
+      .send('service_3j1l9ki', 'template_2w8lh99', {
+        message: emailContent
+      })
+      .then(
+        (result) => {
+          console.log('Success:', result.text);
+        },
+        (error) => {
+          console.log('Error:', error.text);
+        }
+      );
+
         console.log(
             this.state.name + " " +
             this.state.partnerName + " " +
