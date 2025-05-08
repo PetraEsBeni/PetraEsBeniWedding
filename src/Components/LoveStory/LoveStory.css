@@ -1,0 +1,199 @@
+.lovestory-container {
+    flex-direction: column;
+      display: flex;
+      position: relative;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 20px 0;
+      background-color: #f0f0f0;
+  }
+  
+  .lovestory-title {
+    font-family: 'Dancing Script', cursive;
+    padding: 20px;
+    font-size: xxx-large;
+    height: 100%;
+    color: #da9325;
+  }
+  
+  .lovestory {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      max-width: 100%;
+      padding: 20px 0;
+    }
+    
+    .lovestory::after {
+      display: flex;
+      content: '';
+      position: absolute;
+      padding-left: 0.3vh;
+      background-color: #3a383859;
+      top: 0;
+      padding-right: 0.3vh;
+      bottom: 0;
+    }
+    
+    .lovestory-event-left {
+      font-family: 'Dancing Script', cursive;
+      color: #da9325;
+      position: relative;
+      margin-right: 30%;
+      margin-bottom: 2%;
+    }
+
+    .lovestory-event-right {
+        font-family: 'Dancing Script', cursive;
+        color: #da9325;
+        position: relative;
+        margin-left: 30%;
+        margin-bottom: 2%;
+      }
+    
+    .lovestory-event.left {
+      left: 17%;
+    }
+    
+    .lovestory-event.right {
+      left: 30%;
+    }
+    
+    .lovestory-content {
+      padding: 20px;
+      background-color: #fff;
+      position: relative;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+    }
+    
+    .lovestory-event.left .lovestory-content {
+      margin-left: auto;
+    }
+    
+    .lovestory-event.right .lovestory-content {
+      margin-right: auto;
+    }
+    
+    .lovestory-image {
+        width: 25%;
+        height: 60%;
+        margin-right: 2%;
+    }
+    
+    .lovestory-event.left .lovestory-icon {
+      right: -25px;
+    }
+    
+    .lovestory-event.right .lovestory-icon {
+      left: -25px;
+    }
+  
+    .lovestory-event-name {
+      font-family: 'Dancing Script', cursive;
+      color: #da9325;
+      position: relative;
+      font-size: larger;
+      word-wrap: break-word;
+      width: 30%;
+    }
+  
+    .love-events-table{
+      display: flex;
+      width: 30%;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .love-events-table-body {
+      width: 100%;
+    }
+  
+    .love-events-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  
+    .love-events-column{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 33%;
+    }
+  
+    .love-events-column.rightEvent{
+      display: flex;
+      flex-direction: row;
+      width: 33%;
+    }
+  
+    .love-events-column.leftEvent{
+      display: flex;
+      flex-direction: row;
+      width: 33%;
+    }
+  
+    .dot {
+      padding: 7px;
+      background-color: #da9325;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .lovestory-event-box-left{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-right: 30%;
+    }
+
+    .lovestory-event-box-right{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-left: 30%;
+    }
+    
+    /* Responsive styling */
+    @media screen and (max-width: 768px) {
+      .lovestory-event.left {
+        left: 1%;
+        /*text-align: center;*/
+      }
+  
+      .lovestory-event.right {
+          left: 40%;
+          /*text-align: center;*/
+        }
+  
+      .love-events-table{
+        display: flex;
+        width: 60%;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  
+    @media (min-width: 601px) and (max-width: 1400px) {
+      .lovestory-event.left {
+        left: 12%;
+        /*text-align: center;*/
+      }
+  
+      .lovestory-event.right {
+          left: 34%;
+          /*text-align: center;*/
+        }
+  
+      .love-events-table{
+        display: flex;
+        width: 60%;
+        align-items: center;
+        justify-content: center;
+      }
+  }
