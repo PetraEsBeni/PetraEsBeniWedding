@@ -24,13 +24,13 @@ const App: React.FC = () => {
           <tr>
             <ImageHeader/>
             <CountDown/>
-            <Invitation onScrollToFeedback={scrollToFeedback} /> 
+            {/*<Invitation onScrollToFeedback={scrollToFeedback} /> 
             <TimeTable/> 
             <div ref={feedbackRef}>
               <Feedback />
             </div>
             <LoveStory/>
-            <Footer/>
+            <Footer/>*/}
           </tr>
         </tbody>
       </table>
