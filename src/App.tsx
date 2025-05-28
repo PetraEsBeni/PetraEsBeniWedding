@@ -4,11 +4,11 @@ import { ImageHeader } from './Components/ImageHeader/imageHeader';
 import { MenuTitle } from './Components/MenuTitle/menutitle';
 
 const App: React.FC = () => {
-  {/*const feedbackRef = useRef<HTMLDivElement | null>(null);*/}
+  /*const feedbackRef = useRef<HTMLDivElement | null>(null);*/
 
- {/* const scrollToFeedback = () => {
+ /* const scrollToFeedback = () => {
     feedbackRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  };*/}
+  };*/
   
   return (
     <div className="App">
