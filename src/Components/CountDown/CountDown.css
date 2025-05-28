@@ -4,6 +4,7 @@
     background-color: #3a3838e8;
     color: #da9325;
     height: 100%;
+    width: 100%;
     align-items: center;
 }
 
@@ -72,7 +73,7 @@
     
     .time-box span {
             color: #da9325;
-            font-size: x-small;
+           font-size: xx-small;
     }
 }
 

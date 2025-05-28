@@ -3,6 +3,5 @@
 }
 
 .table{
-  width: 100%; /* Táblázat szélessége 100% */
-  border-collapse: collapse; /* Határok összevonása */
+  width: 100%;
 }

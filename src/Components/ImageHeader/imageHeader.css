@@ -4,7 +4,7 @@
     align-items: center; /* Középre igazítás függőlegesen */
     position: relative;
     width: 100%;
-    height: 100vh; /* Teljes magasság */
+    height: 90vh; /* Teljes magasság */
     overflow: hidden;
 }
 
@@ -34,13 +34,12 @@
   
   .carousel-slide {
     min-width: 33.33%;
-    height: 100vh; /* Beállíthatod a magasságot */
-    background-size: cover; /* A háttérkép kitöltése */
+    height: 100vh; 
+    background-size: cover; 
     background-position: 50% 20%; 
     animation: none;
   }
 
-/* Kép stílus */
 .background-image {
     width: 100%;
     height: 100%;
@@ -50,10 +49,9 @@
     left: 0;
 }
 
-/* Szöveg az animáció felett */
 .text-overlay {
     position: relative;
-    background-color: rgba(250, 250, 250, 0.726); /* Fekete háttér áttetszően */
+    background-color: rgba(250, 250, 250, 0.726);
     color: rgb(218, 163, 25);
     padding: 20px; 
     border-radius: 8px;
