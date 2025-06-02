@@ -1,10 +1,11 @@
 .container {
-    display: flex; /* Flexbox aktiválása */
-    justify-content: center; /* Középre igazítás vízszintesen */
-    align-items: center; /* Középre igazítás függőlegesen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 100%;
-    height: 90vh; /* Teljes magasság */
+    max-width: 100%;
+    height: 90vh;
     overflow: hidden;
 }
 
@@ -87,5 +88,14 @@
     display: flex;
     animation: slide 180s linear infinite; 
     width: 1700%;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .container {
+    height: 130vh;
+  }
+  .carousel-slide {
+    height: 130vh; 
   }
 }

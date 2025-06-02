@@ -1,15 +1,16 @@
 .header {
-    position: fixed; /* Fix pozicionálás */
-    top: 0; /* Tetejére rögzítve */
-    left: 0; /* Balra rögzítve */
-    width: 100%; /* Szélesség 100% */
-    height: 100px; /* Magasság 100px (kb. 10 cm) */
-    background-color: #333; /* Háttérszín */
-    color: white; /* Szöveg színe */
-    display: flex; /* Flexbox a tartalomhoz */
-    align-items: center; /* Vertikális középre igazítás */
-    justify-content: center; /* Horizontális középre igazítás */
-    z-index: 1000; /* Z-index, hogy a legfelső rétegben legyen */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    min-width: 0;
 }
 
 .button {
