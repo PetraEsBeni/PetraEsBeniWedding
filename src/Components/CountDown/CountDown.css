@@ -16,6 +16,14 @@
     color: #da9325;
 }
 
+.countdown-context-continue {
+    font-family: emoji;
+    padding: 20px 0px 20px 0px;
+    font-size: x-large;
+    height: 100%;
+    color: #da9325;
+}
+
 .counter-container {
     display: flex;
     justify-content: center;

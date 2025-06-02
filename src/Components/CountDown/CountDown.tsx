@@ -72,6 +72,7 @@ export class CountDown extends React.Component<{}, IState>{
                         </div>
                     </div>
                 </div>
+                <div className="countdown-context-continue">Ahogy a nagy nap közeledik, a részletek is érkeznek – örülünk, hogy itt vagy!</div>
             </td>
         );
       }
