@@ -63,11 +63,19 @@
     font-family: 'Dancing Script', cursive;
 }
 
+.header-logo {
+  width: 200px;
+  height: 190px;
+  margin-right: 10px;
+}
+
 .Osszehazasodunk {
     font-family:'Courier New', Courier, monospace;
     font-weight: bold;
+    font-size: x-large;
     padding: 10px 60px 10px 60px;
     border-bottom: 2px solid rgb(218, 163, 25);
+    margin: 0px;
 }
 
 .Datum{
