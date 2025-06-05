@@ -57,6 +57,7 @@
     text-align: center; 
     border: 2px solid rgb(218, 163, 25);
     z-index: 1;
+    max-width: 450px;
 }
 
 .PetraAndBeni{
@@ -64,9 +65,7 @@
 }
 
 .header-logo {
-  width: 200px;
-  height: 190px;
-  margin-right: 10px;
+  width: 50%
 }
 
 .Osszehazasodunk {
@@ -84,6 +83,17 @@
 }
 
 @media (max-width: 600px) {
+  .header-logo {
+    width: 80%;
+  }
+  .Osszehazasodunk{
+    padding: 10px;
+    font-size: larger;
+  }
+  .text-overlay {
+    max-width: 250px;
+  }
+
   .carousel-wrapper {
     display: flex;
     animation: slide 150s linear infinite; 
