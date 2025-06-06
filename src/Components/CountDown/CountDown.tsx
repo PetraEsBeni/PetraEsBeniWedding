@@ -23,7 +23,7 @@ export class CountDown extends React.Component<{}, IState>{
     }
 
     componentDidMount() {
-        const targetDate = new Date("2026-06-06T16:00:00").getTime();
+        const targetDate = new Date("2026-06-06T15:00:00").getTime();
     
         this.timer = setInterval(() => {
           const now = new Date().getTime();
@@ -43,7 +43,7 @@ export class CountDown extends React.Component<{}, IState>{
       }
     
       componentWillUnmount() {
-        clearInterval(this.timer); // Timer tisztítása a komponens unmountolásakor
+        clearInterval(this.timer);
       }
     
       render() {
