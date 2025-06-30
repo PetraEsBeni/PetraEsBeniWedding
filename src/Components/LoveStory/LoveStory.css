@@ -1,5 +1,7 @@
 /* LoveStory.css */
 .timeline-container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   padding: 20px;
   background: linear-gradient(to bottom, #3a3838e8 0%, #f0f0f0 30%);
@@ -104,6 +106,17 @@
   background: #3a3838;
   transform: translateX(-50%);
   z-index: 1;
+}
+
+.end-desc {
+  font-size: 1.2rem;
+  font-family: 'Great Vibes', cursive;
+  padding-top: 20px;
+  color: #da9325;
+}
+
+.forever {
+  font-weight: bold;
 }
 
 @media (max-width: 900px) {
