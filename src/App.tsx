@@ -1,6 +1,8 @@
 import './App.css';
 import { CountDown } from './Components/CountDown/CountDown';
+import { Footer } from './Components/Footer/Footer';
 import { ImageHeader } from './Components/ImageHeader/imageHeader';
+import { LoveStory } from './Components/LoveStory/LoveStory';
 import { MenuTitle } from './Components/MenuTitle/menutitle';
 
 const App: React.FC = () => {
@@ -22,9 +24,9 @@ const App: React.FC = () => {
             <TimeTable/> 
             <div ref={feedbackRef}>
               <Feedback />
-            </div>
+            </div>*/}
             <LoveStory/>
-            <Footer/>*/}
+            <Footer/>
           </tr>
         </tbody>
       </table>
