@@ -9,16 +9,20 @@ interface VotingState {
     hasVoted: boolean;
     userId: string;
     votedImageId: number | null;
+    isAdmin: boolean;
 }
 
 export class Voting extends React.Component<{}, VotingState> {
+    private readonly ADMIN_UID = "kzXUEyAHJ6gGyDjXsvy4cdqp5bn1";
+
     constructor(props: {}) {
         super(props);
         this.state = {
             votes: {},
             hasVoted: localStorage.getItem('hasVoted') === 'true',
             userId: localStorage.getItem('userId') || '',
-            votedImageId: Number(localStorage.getItem('votedImageId')) || null
+            votedImageId: Number(localStorage.getItem('votedImageId')) || null,
+            isAdmin: false
         };
     }
 
@@ -29,11 +33,15 @@ export class Voting extends React.Component<{}, VotingState> {
         }
 
         const userId = auth.currentUser!.uid;
+        const isAdmin = userId === this.ADMIN_UID;
+        
         localStorage.setItem('userId', userId);
-        this.setState({ userId });
+        this.setState({ userId, isAdmin });
 
-        const votes = await VotingService.getAllVotes(VotingImages);
-        this.setState({ votes });
+        if (isAdmin) {
+            const votes = await VotingService.getAllVotes(VotingImages);
+            this.setState({ votes });
+        }
     }
 
     handleVote = async (imageId: number) => {
@@ -45,14 +53,23 @@ export class Voting extends React.Component<{}, VotingState> {
                 }
 
                 await VotingService.addVote(imageId, auth.currentUser!.uid);
-                this.setState(prevState => ({
-                    votes: {
-                        ...prevState.votes,
-                        [imageId]: (prevState.votes[imageId] || 0) + 1
-                    },
-                    hasVoted: true,
-                    votedImageId: imageId
-                }));
+                
+                if (this.state.isAdmin) {
+                    this.setState(prevState => ({
+                        votes: {
+                            ...prevState.votes,
+                            [imageId]: (prevState.votes[imageId] || 0) + 1
+                        },
+                        hasVoted: true,
+                        votedImageId: imageId
+                    }));
+                } else {
+                    this.setState({
+                        hasVoted: true,
+                        votedImageId: imageId
+                    });
+                }
+                
                 localStorage.setItem('hasVoted', 'true');
                 localStorage.setItem('votedImageId', imageId.toString());
             } catch (error: any) {
@@ -73,14 +90,23 @@ export class Voting extends React.Component<{}, VotingState> {
                 }
 
                 await VotingService.deleteVote(this.state.votedImageId, auth.currentUser!.uid);
-                this.setState(prevState => ({
-                    votes: {
-                        ...prevState.votes,
-                        [this.state.votedImageId!]: prevState.votes[this.state.votedImageId!] - 1
-                    },
-                    hasVoted: false,
-                    votedImageId: null
-                }));
+                
+                if (this.state.isAdmin) {
+                    this.setState(prevState => ({
+                        votes: {
+                            ...prevState.votes,
+                            [this.state.votedImageId!]: prevState.votes[this.state.votedImageId!] - 1
+                        },
+                        hasVoted: false,
+                        votedImageId: null
+                    }));
+                } else {
+                    this.setState({
+                        hasVoted: false,
+                        votedImageId: null
+                    });
+                }
+                
                 localStorage.removeItem('hasVoted');
                 localStorage.removeItem('votedImageId');
             } catch (error: any) {
@@ -98,7 +124,7 @@ export class Voting extends React.Component<{}, VotingState> {
                 <h1 className="question">Neked melyik a kedvenced?</h1>
                 <p className="flex-lines">
                     <span>Tanácstalanok vagyunk melyik logó illene a legjobban hozzánk, segíts nekünk!</span>
-                    <span>Csak egy logóra szavazhatsz!</span>
+                    <span>Csak egy logóra szavazhatsz, kérlek ne játszd ki a rendszert! 😄</span>
                 </p>
                 <div className="image-grid">
                     {VotingImages.map((image) => (
@@ -106,14 +132,17 @@ export class Voting extends React.Component<{}, VotingState> {
                             <img
                                 src={image.url}
                                 alt={image.alt}
-                                className={this.state.hasVoted ? 'disabled' : ''}
+                                className={`${this.state.hasVoted ? 'disabled' : ''} 
+                                          ${this.state.votedImageId === image.id ? 'voted' : ''}`}
                             />
                             <div className="vote-section">
                                 <button
                                     onClick={() => this.handleVote(image.id)}
                                     disabled={this.state.hasVoted}
+                                    className={this.state.votedImageId === image.id ? 'voted-button' : ''}
                                 >
-                                    Szavazat ({this.state.votes[image.id] || 0})
+                                    {this.state.votedImageId === image.id ? 'Szavazatod ✓' : 'Szavazás'}
+                                    {this.state.isAdmin && ` (${this.state.votes[image.id] || 0})`}
                                 </button>
                             </div>
                         </div>
