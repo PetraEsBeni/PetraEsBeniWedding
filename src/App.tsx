@@ -2,6 +2,7 @@ import './App.css';
 import { CountDown } from './Components/CountDown/CountDown';
 import { ImageHeader } from './Components/ImageHeader/imageHeader';
 import { MenuTitle } from './Components/MenuTitle/menutitle';
+import { Voting } from './Components/Voting/Voting';
 
 const App: React.FC = () => {
   /*const feedbackRef = useRef<HTMLDivElement | null>(null);*/
@@ -18,6 +19,7 @@ const App: React.FC = () => {
           <tr>
             <ImageHeader/>
             <CountDown/>
+            <Voting/>
             {/*<Invitation onScrollToFeedback={scrollToFeedback} /> 
             <TimeTable/> 
             <div ref={feedbackRef}>
