@@ -9,12 +9,11 @@ export class ImageHeader extends React.Component {
                <Carousel/>
                 <div className="text-overlay">
                     <img
-                        src="/logo_trans.png"
+                        src="/MainLogoBolder.png"
                         alt="Logo"
                         className="header-logo"
                     />
                     <p className="Osszehazasodunk">Összeházasodunk!</p>
-                    <p className="Datum">2026.06.06.</p>
                 </div>
             </td>
         )

@@ -65,7 +65,7 @@
 }
 
 .header-logo {
-  width: 50%
+  width: 100%
 }
 
 .Osszehazasodunk {
@@ -73,7 +73,6 @@
     font-weight: bold;
     font-size: x-large;
     padding: 10px 60px 10px 60px;
-    border-bottom: 2px solid rgb(218, 163, 25);
     margin: 0px;
 }
 
