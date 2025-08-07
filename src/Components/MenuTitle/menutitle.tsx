@@ -7,7 +7,7 @@ export class MenuTitle extends React.Component {
             <div className="header">
                 <span className="title">
                     Petra & Beni
-                    </span>
+                </span>
             </div>
         )
     }
