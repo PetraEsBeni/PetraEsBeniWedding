@@ -13,7 +13,10 @@ export class LoveStory extends React.Component {
                         <div key={index} className={`timeline-item ${index % 2 === 0 ? "left" : "right"}`}>
                             <div className="timeline-content">
                                 <img src={event.image} alt="event" className="timeline-image" />
-                                <p className="timeline-desc">{event.desc}</p>
+                                <div>
+                                    <div className="timeline-event-title">{event.title}</div>
+                                    <p className="timeline-desc">{event.desc}</p>
+                                </div>
                             </div>
                             <div className="timeline-dot"></div>
                         </div>
