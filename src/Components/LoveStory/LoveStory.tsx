@@ -6,7 +6,7 @@ export class LoveStory extends React.Component {
 
     render() {
         return (
-            <div className="timeline-container">
+            <td className="timeline-container">
                 <div className="timeline-title">Szerelmünk története</div>
                 <div className="timeline">
                     {Events.map((event, index) => (
@@ -19,7 +19,11 @@ export class LoveStory extends React.Component {
                         </div>
                     ))}
                 </div>
-            </div>
+                <div className="end-desc">
+                    Most már minden adott, hogy 2026.06.06-án kimondjuk:
+                    <span className="forever"> örökre.</span>
+                </div>
+            </td>
         );
     }
 
