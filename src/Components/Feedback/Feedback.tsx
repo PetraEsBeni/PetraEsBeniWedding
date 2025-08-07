@@ -3,6 +3,7 @@ import './Feedback.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
 import emailjs from 'emailjs-com';
+import { FeedbackService } from "./FeedbackService";
 
 export interface Child {
     name: string;
@@ -42,38 +43,42 @@ export class Feedback extends React.Component<{}, IState> {
                     </div>
                 ) : (
                     <form onSubmit={this.handleSubmit} className="feedback-form">
-                        <div className="feedback-input-container">
-                            <label className="feedback-label">Név: </label>
+                        <div className="feedback-input-group">
+                            <label htmlFor="name" className="feedback-label">Név: </label>
                             <input
+                                id="name"
                                 type="text"
                                 value={this.state.name}
                                 onChange={(e) => this.setState({ name: e.target.value })}
                                 required
+                                className="feedback-input"
                             />
                         </div>
 
-                        <div className="feedback-input-container">
-                            <label className="feedback-label">Pár neve (opcionális): </label>
+                        <div className="feedback-input-group">
+                            <label htmlFor="partnerName" className="feedback-label">Pár neve (opcionális): </label>
                             <input
+                                id="partnerName"
                                 type="text"
                                 value={this.state.partnerName}
                                 onChange={(e) => this.setState({ partnerName: e.target.value })}
+                                className="feedback-input"
                             />
                         </div>
 
-                        <div className="feedback-input-container feedback-child-input">
+                        <div className="feedback-input-group feedback-children-section">
                             <label className="feedback-label">Gyerekek: </label>
                             {this.state.children.length === 0 ? (
-                                <button className="children-button" type="button" onClick={this.addChild}>
-                                    <FontAwesomeIcon icon={faPlus} />
+                                <button className="children-add-button" type="button" onClick={this.addChild}>
+                                    <FontAwesomeIcon icon={faPlus} /> Gyerek hozzáadása
                                 </button>
                             ) : (
-                                <div>
+                                <div className="children-list">
                                     {this.state.children.map((child, index) => (
                                         <div key={index} className="add-children">
                                             <input
                                                 type="text"
-                                                className="children-name"
+                                                className="children-name feedback-input"
                                                 placeholder="Név"
                                                 value={child.name}
                                                 onChange={(e) => this.handleChildNameChange(index, e.target.value)}
@@ -81,26 +86,28 @@ export class Feedback extends React.Component<{}, IState> {
                                             />
                                             <input
                                                 type="number"
-                                                className="children-age"
+                                                className="children-age feedback-input"
                                                 placeholder="Kor"
                                                 value={child.age}
                                                 onChange={(e) => this.handleChildAgeChange(index, e.target.value)}
                                                 required
                                             />
-                                            <button className="children-button" type="button" onClick={() => this.removeChild(index)}>
+                                            <button className="children-icon-button" type="button" onClick={() => this.removeChild(index)}>
                                                 <FontAwesomeIcon className="children-delete-icon" icon={faTimes} />
-                                            </button>
-                                            <button className="children-button" type="button" onClick={this.addChild}>
-                                                <FontAwesomeIcon className="children-add-icon" icon={faPlus} />
                                             </button>
                                         </div>
                                     ))}
+                                    <button className="children-add-button" type="button" onClick={this.addChild}>
+                                        <FontAwesomeIcon icon={faPlus} /> Gyerek hozzáadása
+                                    </button>
                                 </div>
                             )}
                         </div>
 
-                        <div>
-                            <button type="button" onClick={this.openModal} disabled={!this.state.name}>Visszajelzés küldése</button>
+                        <div className="feedback-submit-button-container">
+                            <button type="button" onClick={this.openModal} disabled={!this.state.name || this.state.isLoading} className="submit-button">
+                                {this.state.isLoading ? 'Küldés folyamatban...' : 'Visszajelzés küldése'}
+                            </button>
                         </div>
                     </form>
                 )}
@@ -109,14 +116,10 @@ export class Feedback extends React.Component<{}, IState> {
                     <div className="feedback-modal-overlay">
                         <div className="feedback-modal">
                             <p>Biztosan el akarja küldeni a visszajelzést?</p>
-                            {this.state.isLoading ? (
-                                <div className="spinner">Küldés folyamatban...</div> // Spinner megjelenítése
-                            ) : (
-                                <>
-                                    <button onClick={this.handleSubmit}>Igen</button>
-                                    <button onClick={this.closeModal}>Nem</button>
-                                </>
-                            )}
+                            <div className="modal-buttons">
+                                <button onClick={this.handleSubmit} className="modal-button confirm-button" disabled={this.state.isLoading}>Igen</button>
+                                <button onClick={this.closeModal} className="modal-button cancel-button" disabled={this.state.isLoading}>Nem</button>
+                            </div>
                         </div>
                     </div>
                 )}
@@ -169,36 +172,19 @@ export class Feedback extends React.Component<{}, IState> {
     private handleSubmit = (event: any) => {
         event.preventDefault();
         this.setState({ isLoading: true });
+        FeedbackService.initJs();
 
-        emailjs.init('ZCVVbW_74u-qXVJRl');
+        const { name, partnerName, children } = this.state;
 
-        const partner = this.state.partnerName ? this.state.partnerName : "-";
-        var children = "";
-        for (var child of this.state.children) {
-            const childData = "Név: " + child.name + ", Kor: " + child.age + "\n";
-            children += childData;
-        }
-
-        const emailContent = `
-        Visszajelző neve: ${this.state.name}
-        Visszajelző párja: ${partner}
-        Gyerekek:\n ${children}
-      `;
-
-        emailjs
-            .send('service_3j1l9ki', 'template_2w8lh99', {
-                message: emailContent
+        FeedbackService.sendFeedback(name, partnerName, children)
+            .then(() => {
+                this.setState({ isSubmitted: true, isModalOpen: false, isLoading: false });
             })
-            .then(
-                 (result) => {
-                    console.log('Success:', result.text);
-                    this.setState({ isSubmitted: true, isModalOpen: false, isLoading: false });
-                },
-                (error) => {
-                    console.log('Error:', error.text);
-                    this.setState({ isModalOpen: false, isLoading: false });
-                }
-            );
+            .catch((error) => {
+                console.error('Error sending feedback:', error);
+                alert('Hiba történt a visszajelzés küldésekor. Kérjük, próbálja újra.');
+                this.setState({ isModalOpen: false, isLoading: false });
+            });
 
         console.log(
             this.state.name + " " +

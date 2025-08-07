@@ -1,15 +1,28 @@
 import React from "react";
 import "./Invitation.css";
+import { Feedback } from "../Feedback/Feedback";
 
-interface InvitationProps {
-    onScrollToFeedback: () => void;
+interface IState {
+    showFeedback: boolean;
 }
 
-export class Invitation extends React.Component<InvitationProps> {
+export class Invitation extends React.Component<{}, IState> {
+    constructor(props: {}) {
+        super(props);
+        this.state = {
+            showFeedback: false
+        };
+    }
+
+    private toggleFeedback = () => {
+        this.setState(prevState => ({ showFeedback: !prevState.showFeedback }));
+    }
+
     public render(){
+        const { showFeedback } = this.state;
         return (
             <div className="invitation-container">
-                <div className="invitation-title">Drága szeretteink!</div>{/*sok szeretettel meghívunk esküvőnkre*/}
+                <div className="invitation-title">Drága szeretteink!</div>
                 <div>Fent a pántos légkör öblén szálldosnak a brengizők, miközben a csurrogó hantipálma levelein pihen a harmat. 
                     A mantusz szél süvítve tör előre, átsiklik az égpalánkon, ahol a zengő csermely habjai halk dallamot visznek tovább. 
                     Lent a hintörény lassan körbefonja a tájat, és finoman öleli magához a szárnymezernyt, mintha sosem akarná elengedni.</div>
@@ -20,7 +33,12 @@ export class Invitation extends React.Component<InvitationProps> {
                 <div className="invitation-subtitle">Nászajándék</div>
                 <div>Fent a pántos légkör öblén szálldosnak a brengizők, miközben a csurrogó hantipálma levelein pihen a harmat. 
                 A mantusz szél süvítve tör előre, átsiklik az égpalánkon, ahol a zengő csermely habjai halk dallamot visznek tovább. </div>
-                <button className="feedback-button" onClick={this.props.onScrollToFeedback}>Visszajelzés</button>
+                
+                <button className="feedback-button" onClick={this.toggleFeedback}>
+                    {showFeedback ? "Visszajelzés bezárása" : "Visszajelzés"}
+                </button>
+
+                {showFeedback && <Feedback />}
             </div>
         )
     }
