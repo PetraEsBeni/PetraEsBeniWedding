@@ -22,4 +22,24 @@ html, body {
   overflow-x: hidden;
   width: 100%;
   max-width: 100%;
+  background-color: #3a3838e8;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background: #232323;
+}
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 6px;
+  border: 2px solid #232323;
+}
+::-webkit-scrollbar-track {
+  background: #3a3838;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: white #3a3838;
 }
