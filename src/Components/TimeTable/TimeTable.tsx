@@ -13,49 +13,44 @@ export class TimeTable extends React.Component {
 
     public render() {
         return (
-            <td className="timeline-container">
+            <div className="timeline-container">
                 <div className="timeline-title">Menetrend</div>
                 <div className="timeline">
-                    <table className="events-table">
-                        <tbody className="events-table-body">
-                            {this.events.map((event, index) => (
-                                <tr className="events-row">
-                                    {index % 2 === 0 ?
-                                        <>
-                                            <td className="events-column leftEvent">
-                                                <div key={`${index}-event`}>
-                                                    <div className="timeline-event">{event.time}</div>
-                                                    <div className="timeline-icon">{event.icon}</div>
-                                                    <div className="timeline-event-name">{event.event}</div>
-                                                </div>
-                                            </td>
-                                            <td className="events-column">
-                                                <div key={`${index}-dot`} className="dot"></div>
-                                            </td>
-                                            <td className="events-column"></td>
-                                        </>
-                                        :
-                                        <>
-                                            <td className="events-column"></td>
-                                            <td className="events-column">
-                                                <div key={`${index}-dot`} className="dot"></div>
-                                            </td>
-                                            <td className="events-column rightEvent">
-                                                <div key={`${index}-event`}>
-                                                    <div className="timeline-event">{event.time}</div>
-                                                    <div className="timeline-icon">{event.icon}</div>
-                                                    <div className="timeline-event-name">{event.event}</div>
-                                                </div>
-                                            </td>
-                                        </>}
-
-                                </tr>
-
-                            ))}
-                        </tbody>
-                    </table>
+                    {this.events.map((event, index) => (
+                        <div key={index} className="events-row">
+                            {index % 2 === 0 ?
+                                <>
+                                    <div className="events-column leftEvent">
+                                        <div className="event-content-wrapper">
+                                            <div className="timeline-event">{event.time}</div>
+                                            <div className="timeline-icon">{event.icon}</div>
+                                            <div className="timeline-event-name">{event.event}</div>
+                                        </div>
+                                    </div>
+                                    <div className="events-column center-column dot-column">
+                                        <div className="dot"></div>
+                                    </div>
+                                    <div className="events-column empty-column"></div>
+                                </>
+                                :
+                                <>
+                                    
+                                    <div className="events-column empty-column"></div>
+                                    <div className="events-column center-column dot-column">
+                                        <div className="dot"></div>
+                                    </div>
+                                    <div className="events-column rightEvent">
+                                        <div className="event-content-wrapper">
+                                            <div className="timeline-event">{event.time}</div>
+                                            <div className="timeline-icon">{event.icon}</div>
+                                            <div className="timeline-event-name">{event.event}</div>
+                                        </div>
+                                    </div>
+                                </>}
+                        </div>
+                    ))}
                 </div>
-            </td>
+            </div>
         )
     }
 }

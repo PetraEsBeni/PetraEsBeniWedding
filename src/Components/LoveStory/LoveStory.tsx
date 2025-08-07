@@ -15,13 +15,13 @@ export class LoveStory extends React.Component {
 
     render() {
         return (
-            <td className="lovestory-container">
+            <div className="lovestory-container">
                 <div className="lovestory-title">Szerelmünk története</div>
                 <div className="lovestory">
                     <table className="love-events-table">
                         <tbody className="love-events-table-body">
                             {this.events.map((event, index) => (
-                                <tr className="love-events-row">
+                                <tr key={index} className="love-events-row">
                                     {index % 2 === 0 ?
                                         <>
                                             <td className="love-events-column leftEvent">
@@ -61,8 +61,8 @@ export class LoveStory extends React.Component {
                         </tbody>
                     </table>
                 </div>
-            </td>
-        )
+            </div>
+        );
     }
 
 }

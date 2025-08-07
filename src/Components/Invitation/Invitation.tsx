@@ -8,7 +8,7 @@ interface InvitationProps {
 export class Invitation extends React.Component<InvitationProps> {
     public render(){
         return (
-            <td className="invitation-container">
+            <div className="invitation-container">
                 <div className="invitation-title">Drága szeretteink!</div>{/*sok szeretettel meghívunk esküvőnkre*/}
                 <div>Fent a pántos légkör öblén szálldosnak a brengizők, miközben a csurrogó hantipálma levelein pihen a harmat. 
                     A mantusz szél süvítve tör előre, átsiklik az égpalánkon, ahol a zengő csermely habjai halk dallamot visznek tovább. 
@@ -21,7 +21,7 @@ export class Invitation extends React.Component<InvitationProps> {
                 <div>Fent a pántos légkör öblén szálldosnak a brengizők, miközben a csurrogó hantipálma levelein pihen a harmat. 
                 A mantusz szél süvítve tör előre, átsiklik az égpalánkon, ahol a zengő csermely habjai halk dallamot visznek tovább. </div>
                 <button className="feedback-button" onClick={this.props.onScrollToFeedback}>Visszajelzés</button>
-            </td>
+            </div>
         )
     }
 }

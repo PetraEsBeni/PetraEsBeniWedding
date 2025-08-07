@@ -34,7 +34,7 @@ export class Feedback extends React.Component<{}, IState> {
 
     public render() {
         return (
-            <td className="feedback-container">
+            <div className="feedback-container">
                 <div className="feedback-title">Visszajelzés</div>
                 {this.state.isSubmitted ? (
                     <div className="success-message">
@@ -120,7 +120,7 @@ export class Feedback extends React.Component<{}, IState> {
                         </div>
                     </div>
                 )}
-            </td>
+            </div>
         )
     }
 

@@ -120,7 +120,7 @@ export class Voting extends React.Component<{}, VotingState> {
 
     render() {
         return (
-            <td className="voting-container">
+            <div className="voting-container">
                 <h1 className="question">Neked melyik a kedvenced?</h1>
                 <p className="flex-lines">
                     <span>Tanácstalanok vagyunk melyik logó illene a legjobban hozzánk, segíts nekünk!</span>
@@ -160,7 +160,7 @@ export class Voting extends React.Component<{}, VotingState> {
                 >
                     🗑️ Szavazat törlése
                 </button>
-            </td>
+            </div>
         );
     }
 }

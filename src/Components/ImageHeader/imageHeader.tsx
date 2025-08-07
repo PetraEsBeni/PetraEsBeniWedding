@@ -5,7 +5,7 @@ import { Carousel } from "./Carousel";
 export class ImageHeader extends React.Component {
     public render(){
         return (
-            <td className="container">
+            <div className="container">
                <Carousel/>
                 <div className="text-overlay">
                     <img
@@ -15,7 +15,7 @@ export class ImageHeader extends React.Component {
                     />
                     <p className="Osszehazasodunk">Összeházasodunk!</p>
                 </div>
-            </td>
+            </div>
         )
     }
 }
