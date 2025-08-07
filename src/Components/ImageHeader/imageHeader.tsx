@@ -9,7 +9,7 @@ export class ImageHeader extends React.Component {
                <Carousel/>
                 <div className="text-overlay">
                     <img
-                        src="/THELogo.png"
+                        src="/THELogoBolder.png"
                         alt="Logo"
                         className="header-logo"
                     />

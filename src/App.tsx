@@ -19,7 +19,6 @@ const App: React.FC = () => {
           <tr>
             <ImageHeader/>
             <CountDown/>
-            <Voting/>
             {/*<Invitation onScrollToFeedback={scrollToFeedback} /> 
             <TimeTable/> 
             <div ref={feedbackRef}>
