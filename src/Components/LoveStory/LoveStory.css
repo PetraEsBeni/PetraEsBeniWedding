@@ -1,4 +1,4 @@
-.timeline-container {
+.lovestory-container {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -6,7 +6,7 @@
   background: linear-gradient(to bottom, #3a3838 0%, #f0f0f0 30%);
 }
 
-.timeline-title {
+.lovestory-title {
   font-family: 'Dancing Script', cursive;
   padding: 20px 0 20px 0;
   font-size: xxx-large;
@@ -15,14 +15,14 @@
   letter-spacing: 2px;
 }
 
-.timeline {
+.lovestory {
   position: relative;
   width: 90%;
   margin: 0 auto;
   padding: 40px 0;
 }
 
-.timeline::before {
+.lovestory::before {
   content: "";
   position: absolute;
   top: 0;
@@ -34,7 +34,7 @@
   z-index: 1;
 }
 
-.timeline-item {
+.lovestory-item {
   position: relative;
   width: 50%;
   padding: 20px 40px 20px 20px;
@@ -43,19 +43,19 @@
   align-items: center;
 }
 
-.timeline-item.left {
+.lovestory-item.left {
   justify-content: flex-end;
   left: 0;
   text-align: left;
 }
 
-.timeline-item.right {
+.lovestory-item.right {
   justify-content: flex-start;
   left: 50%;
   text-align: left;
 }
 
-.timeline-content {
+.lovestory-content {
   display: flex;
   align-items: center;
   gap: 16px;
@@ -68,28 +68,28 @@
   border-radius: 0;
 }
 
-.timeline-image {
+.lovestory-image {
   width: 120px;
   height: auto;
   border-radius: 8px;
 }
 
-.timeline-event-title {
-  color: #da9325;
+.lovestory-event-title {
+  color: #bd7300;
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 6px;
   letter-spacing: 1px;
 }
 
-.timeline-desc {
+.lovestory-desc {
   max-width: 500px;
   color: #3a3838;
   font-size: 1rem;
   font-family: 'Great Vibes', cursive;
 }
 
-.timeline-dot {
+.lovestory-dot {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -100,11 +100,11 @@
   z-index: 3;
 }
 
-.timeline-item.left .timeline-dot {
+.lovestory-item.left .lovestory-dot {
   right: -8px;
 }
 
-.timeline-item.right .timeline-dot {
+.lovestory-item.right .lovestory-dot {
   left: -8px;
 }
 
@@ -118,31 +118,31 @@
 
 .forever {
   font-weight: bold;
-  font-size: 1.15em;
-  font-family: 'Dancing Script', cursive;
+  font-size: 1.6em;
+  font-family: 'Caveat', cursive;
   color: #da9325;
 }
 
 /* Reszponzív - Mobil/Tabletre */
 @media (max-width: 900px) {
-  .timeline {
+  .lovestory {
     width: 100%;
     padding: 10px 0;
   }
-  .timeline::before {
+  .lovestory::before {
     left: 24px;
     top: 30px;
   }
-  .timeline-item,
-  .timeline-item.left,
-  .timeline-item.right {
+  .lovestory-item,
+  .lovestory-item.left,
+  .lovestory-item.right {
     width: 100%;
     left: 0;
     justify-content: flex-start !important;
     text-align: left !important;
     margin-bottom: 36px;
   }
-  .timeline-content {
+  .lovestory-content {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
@@ -150,19 +150,19 @@
     background-color: transparent;
     border-radius: 8px;
   }
-  .timeline-dot {
+  .lovestory-dot {
     left: 16px !important;
     right: auto !important;
   }
-  .timeline-image {
+  .lovestory-image {
     width: 80px;
     border-radius: 6px;
   }
-  .timeline-event-title {
+  .lovestory-event-title {
     font-size: 1.08rem;
     margin-bottom: 4px;
   }
-  .timeline-desc {
+  .lovestory-desc {
     font-size: 1.03rem;
     padding-left: 0;
     max-width: unset;

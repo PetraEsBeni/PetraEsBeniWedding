@@ -6,19 +6,19 @@ export class LoveStory extends React.Component {
 
     render() {
         return (
-            <td className="timeline-container">
-                <div className="timeline-title">Szerelmünk története</div>
-                <div className="timeline">
+            <td className="lovestory-container">
+                <div className="lovestory-title">Szerelmünk története</div>
+                <div className="lovestory">
                     {Events.map((event, index) => (
-                        <div key={index} className={`timeline-item ${index % 2 === 0 ? "left" : "right"}`}>
-                            <div className="timeline-content">
-                                <img src={event.image} alt="event" className="timeline-image" />
+                        <div key={index} className={`lovestory-item ${index % 2 === 0 ? "left" : "right"}`}>
+                            <div className="lovestory-content">
+                                <img src={event.image} alt="event" className="lovestory-image" />
                                 <div>
-                                    <div className="timeline-event-title">{event.title}</div>
-                                    <p className="timeline-desc">{event.desc}</p>
+                                    <div className="lovestory-event-title">{event.title}</div>
+                                    <p className="lovestory-desc">{event.desc}</p>
                                 </div>
                             </div>
-                            <div className="timeline-dot"></div>
+                            <div className="lovestory-dot"></div>
                         </div>
                     ))}
                 </div>
