@@ -1,9 +1,9 @@
 .invitation-container {
     display: flex;
     flex-direction: column;
-    background-color: #f0f0f0;
-    color: #da9325;
-    height: 100%; /* Ezt valószínűleg érdemes min-height-re cserélni, ha a tartalom növekedhet */
+    background-color: transparent;
+    color: #925a00;
+    height: 100%;
     align-items: center;
 }
 
@@ -11,24 +11,23 @@
     font-family: 'Dancing Script', cursive;
     padding: 20px;
     font-size: xxx-large;
-    height: 100%; /* Ezt valószínűleg el kell távolítani, vagy auto-ra állítani, mert a magasságot a tartalomnak kellene meghatároznia */
-    color: #da9325;
+    height: 100%;
+    color: #b46f00;
 }
 
 .invitation-subtitle {
     padding: 20px;
     font-size: large;
-    height: 100%; /* Ezt is érdemes megfontolni */
-    color: #da9325;
+    height: 100%;
+    color: #b46f00;
 }
 
 .feedback-button {
-    background-color: #da9325;
+    background-color: #925a00;
     color: white;
     width: 70%;
     max-width: 300px;
     margin: 12px 20px;
-    /* Hozzáadtam a kerekítést és a border/átmeneteket a Feedback gomb stílusához igazodva */
     border-radius: 8px; 
     border: none;
     cursor: pointer;
@@ -38,5 +37,5 @@
 }
 
 .feedback-button:hover {
-    background-color: #c08020;
+    background-color: rgb(194, 132, 39);
 }

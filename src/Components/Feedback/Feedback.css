@@ -1,8 +1,8 @@
 .feedback-container {
     display: flex;
     flex-direction: column;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: transparent;
+    color: white;
     align-items: center;
     box-sizing: border-box;
     width: 100%;
@@ -13,7 +13,7 @@
     font-family: 'Dancing Script', cursive;
     padding: 20px;
     font-size: xxx-large;
-    color: #da9325;
+    color: #b46f00;
     text-align: center;
 }
 
@@ -36,13 +36,14 @@
     text-align: left;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #555;
+    color: #b46f00;
 }
 
 .feedback-input {
     width: 100%;
     padding: 12px 15px;
     border: 1px solid #ddd;
+    background-color: #fffff0;
     border-radius: 8px;
     font-size: 1em;
     color: #333;
@@ -129,9 +130,9 @@ button:disabled {
 }
 
 .children-add-button:hover {
-    background-color: #da9325;
+    background-color: #925a00;
     color: white;
-    border-color: #da9325;
+    border-color: #925a00;
 }
 
 .feedback-submit-button-container {
@@ -141,7 +142,7 @@ button:disabled {
 }
 
 .submit-button {
-    background-color: #da9325;
+    background-color: #925a00;
     color: white;
     width: 100%;
     max-width: 300px;

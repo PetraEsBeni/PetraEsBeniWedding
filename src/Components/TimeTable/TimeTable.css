@@ -4,14 +4,14 @@
     position: relative;
     max-width: 100%;
     padding: 20px 0;
-    background-color: #333;
+    background-color: transparent;
 }
 
 .timeline-title {
     font-family: 'Dancing Script', cursive;
     padding: 20px;
     font-size: xxx-large;
-    color: #da9325;
+    color: #b46f00;
     text-align: center;
 }
 
@@ -30,8 +30,8 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 2px;
-    background-color: #888080;
+    width: 4px;
+    background-color: #805643;
     top: 0;
     bottom: 0;
     z-index: 0;
@@ -93,7 +93,7 @@
 
 .timeline-event {
     font-family: 'Dancing Script', cursive;
-    color: #a9a3a3;
+    color: #925a00;
 }
 
 .timeline-icon {
@@ -102,7 +102,7 @@
 
 .timeline-event-name {
     font-family: 'Dancing Script', cursive;
-    color: #a9a3a3;
+    color: #925a00;
     font-size: larger;
 }
 

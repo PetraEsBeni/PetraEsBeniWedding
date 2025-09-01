@@ -1,8 +1,8 @@
 .countdown {
     display: flex;
     flex-direction: column;
-    background-color: #3a3838e8;
-    color: #da9325;
+    background-color: transparent;
+    color: #925a00;
     height: 100%;
     width: 100%;
     align-items: center;
@@ -13,7 +13,7 @@
     padding: 20px 0px 0px 0px;
     font-size: xxx-large;
     height: 100%;
-    color: #da9325;
+    color: #b46f00;
 }
 
 .countdown-context-continue {
@@ -21,7 +21,7 @@
     padding: 20px 0px 20px 0px;
     font-size: x-large;
     height: 100%;
-    color: #da9325;
+    color: #925a00;
 }
 
 .counter-container {
@@ -51,11 +51,11 @@
 .time-box p {
     font-size: 2rem;
     margin: 0;
-    color: #da9325;
+    color: #925a00;
 }
 
 .time-box span {
-        color: #da9325;
+        color: #925a00;
         font-size: 1rem;
 }
 
@@ -75,12 +75,9 @@
 
     .time-box p {
         font-size: 1.5rem;
-        margin: 0;
-        color: #da9325;
     }
     
     .time-box span {
-            color: #da9325;
            font-size: xx-small;
     }
 }
@@ -101,20 +98,14 @@
 
     .time-box p {
         font-size: 1.5rem;
-        margin: 0;
-        color: #da9325;
     }
     
     .time-box span {
-            color: #da9325;
             font-size: x-small;
     }
 
     .countdown-title {
         font-family: 'Dancing Script', cursive;
         padding: 10px;
-        font-size: xxx-large;
-        height: 100%;
-        color: #da9325;
     }
 }

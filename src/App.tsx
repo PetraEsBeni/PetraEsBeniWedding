@@ -14,11 +14,13 @@ const App: React.FC = () => {
     <div className="App">
       <MenuTitle />
       <ImageHeader />
-      <CountDown />
-      {/*<Invitation/>
-      <TimeTable />
-      <LoveStory />
-      <Footer />*/}
+      <div className="gradient-background-section">
+        <Invitation/>
+        <TimeTable />
+        <CountDown />
+        <LoveStory />
+      </div>
+        <Footer />
     </div>
   );
 };

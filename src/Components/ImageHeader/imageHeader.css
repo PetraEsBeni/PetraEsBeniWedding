@@ -5,7 +5,7 @@
     position: relative;
     width: 100%;
     max-width: 100%;
-    height: calc(90vh - 100px);
+    height: 90vh;
     overflow: hidden;
 }
 
