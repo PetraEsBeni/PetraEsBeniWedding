@@ -1,4 +1,4 @@
-import FirstImg from "./LoveStoryImages/First.jpg";
+import FirstImg from "./LoveStoryImages/first.jpg";
 import SecondImg from "./LoveStoryImages/second.jpg";
 import ThirdImg from "./LoveStoryImages/third.jpg";
 import FourthImg from "./LoveStoryImages/fourth.jpg";
