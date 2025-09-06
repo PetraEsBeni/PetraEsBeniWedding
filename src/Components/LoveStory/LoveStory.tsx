@@ -26,6 +26,8 @@ export class LoveStory extends React.Component {
                     Most már minden adott, hogy 2026.06.06-án kimondjuk:
                     <span className="forever"> örökre.</span>
                 </div>
+
+                <div className="flower-bottom"></div>
             </div>
         );
     }

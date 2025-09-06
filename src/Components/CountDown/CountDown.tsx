@@ -51,6 +51,8 @@ export class CountDown extends React.Component<{}, IState>{
     
         return (
             <div className="countdown">
+                <div className="flower-decoration left"></div>
+
                 <div className="countdown-title">Visszaszámlálás</div>
                 <div className="counter-container">
                     <div className="time">

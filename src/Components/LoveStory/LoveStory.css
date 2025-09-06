@@ -1,5 +1,6 @@
 .lovestory-container {
   display: flex;
+  position: relative;
   flex-direction: column;
   width: 100%;
   padding: 20px;
@@ -8,11 +9,12 @@
 
 .lovestory-title {
   font-family: 'Dancing Script', cursive;
-  padding: 20px 0 20px 0;
+  padding: 20px 0;
   font-size: xxx-large;
   color: #b46f00;
   text-align: center;
   letter-spacing: 2px;
+  transition: color 0.3s ease;
 }
 
 .lovestory {
@@ -89,24 +91,31 @@
   font-family: 'Great Vibes', cursive;
 }
 
+.lovestory-item:nth-child(4n + 1) .lovestory-dot { 
+  background-color: #f7d716;
+}
+.lovestory-item:nth-child(4n + 2) .lovestory-dot { 
+  background-color: #e79ab5;
+}
+.lovestory-item:nth-child(4n + 3) .lovestory-dot { 
+  background-color: #6fa8dc;
+}
+.lovestory-item:nth-child(4n + 4) .lovestory-dot { 
+  background-color: #a87dc2;
+}
+
 .lovestory-dot {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 16px;
   height: 16px;
-  background-color: #da9325;
   border-radius: 50%;
   z-index: 3;
 }
 
-.lovestory-item.left .lovestory-dot {
-  right: -8px;
-}
-
-.lovestory-item.right .lovestory-dot {
-  left: -8px;
-}
+.lovestory-item.left .lovestory-dot { right: -8px; }
+.lovestory-item.right .lovestory-dot { left: -8px; }
 
 .end-desc {
   font-size: 1.2rem;
@@ -124,7 +133,24 @@
   color: #da9325;
 }
 
+.flower-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0; 
+  width: 200px;
+  height: 300px; 
+  background-image: url("./LoveStoryImages/flower3.png");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: contain;
+  transform: rotate(-5deg);
+}
+
 @media (max-width: 900px) {
+  .flower-bottom {
+    display: none;
+  }
+  
   .lovestory {
     width: 100%;
     padding: 10px 0;
@@ -147,8 +173,6 @@
     align-items: flex-start;
     gap: 8px;
     padding: 8px 8px 8px 36px;
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
   }
   .lovestory-dot {
