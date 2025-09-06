@@ -18,7 +18,7 @@
 .lovestory {
   position: relative;
   width: 90%;
-  max-width: 1000px;
+  max-width: 80%;
   margin: 0 auto;
   padding: 40px 0;
 }
@@ -68,7 +68,7 @@
 }
 
 .lovestory-image {
-  width: 120px;
+  width: 170px;
   height: auto;
   border-radius: 8px;
   object-fit: cover;

@@ -1,8 +1,12 @@
-import FifthImg from "./LoveStoryImages/fifth.jpg";
-import FirstImg from "./LoveStoryImages/first.jpg";
-import NinthImg from "./LoveStoryImages/ninth.jpg";
-import SeventhImg from "./LoveStoryImages/seventh.jpg";
+import FirstImg from "./LoveStoryImages/First.jpg";
+import SecondImg from "./LoveStoryImages/second.jpg";
 import ThirdImg from "./LoveStoryImages/third.jpg";
+import FourthImg from "./LoveStoryImages/fourth.jpg";
+import FifthImg from "./LoveStoryImages/fifth.jpg";
+import SixthImg from "./LoveStoryImages/sixth.jpg";
+import SeventhImg from "./LoveStoryImages/seventh.jpg";
+import EightthImg from "./LoveStoryImages/eightth.jpg";
+import NinthImg from "./LoveStoryImages/ninth.jpg";
 
 export const Events = [
     { 
@@ -13,17 +17,17 @@ export const Events = [
     { 
         title: "Az első csók", 
         desc: "Ezután sokat beszélgettünk Messengeren, és amikor Beni legközelebb hazajött Győrből, már kettesben találkoztunk. Ez a találkozás lett az első randink, és ott csattant el az első csók is. A távolság viszont nagy kihívásnak tűnt. Sokáig gondolkoztunk rajta, hogy belevágjunk-e, de a szívünk döntött.", 
-        image: ThirdImg 
+        image: SecondImg
     },
     { 
         title: "Próbák éve", 
         desc: "Egy évig éltünk távkapcsolatban, havonta egyszer tudtunk csak találkozni. Sok utazás, sok várakozás, de annál több öröm és izgalom töltötte meg ezt az időszakot. Beni az apukájához gyakran jött Miskolcra, mi pedig mindent megtettünk, hogy a távolság ellenére közel maradjunk egymáshoz. Megtanultuk értékelni a közös idő minden percét.", 
-        image: NinthImg
+        image: ThirdImg
     },
     { 
         title: "Végre egy városban", 
         desc: "A nagy döntés: Beni a miskolci egyetemet választotta. Így végre egy városban élhettünk! Ez az időszak nagyon sokat adott nekünk. Már nem csak hétvégéken, hanem minden nap meg tudtuk osztani egymással az életünket. Egyszerűbb hétköznapok, közös tanulások, és az érzés, hogy kezdünk igazán \"mi\" lenni.", 
-        image: SeventhImg 
+        image: FourthImg
     },
     { 
         title: "Közös ritmus – buli, zene, szabadság", 
@@ -33,21 +37,21 @@ export const Events = [
     { 
         title: "Összeköltözés = nagy lépés", 
         desc: "2022 őszén összeköltöztünk, és gyorsan kialakítottuk a saját kis világunkat. A költözés gördülékenyen ment, a mindennapokban pedig megtaláltuk az egyensúlyt. Nagyon élveztük, hogy minden napot együtt tölthetünk – reggeli kávé, esti összebújás, közös rutinok. A szabályaink, mint hogy „nem alszunk el haraggal” és „egyszerre csak egyikünk lehet nyűgös”, azóta is segítenek megőrizni a jó hangulatot.", 
-        image: FirstImg
+        image: SixthImg
     },
     { 
         title: "A lánykérés", 
         desc: "2024 nyarán Horvátországban nyaraltunk két jó barátunkkal, akikkel Beni titokban leszervezte a nagy pillanatot. Egy gyönyörű sziklás parton egy fotózásnak indult program végén Beni letérdelt és azt mondta \"A következő póz legyen az, hogy megkérem a kezed.\" Óriási meglepetés volt és tökéletes pillanat. Ez lett életünk egyik legszebb emléke.", 
-        image: ThirdImg 
+        image: SeventhImg
     },
     { 
         title: "Megérkezés – saját otthon", 
         desc: "2025-ben megvettük az első közös lakásunkat, ami hatalmas mérföldkő volt. A beköltözés nemcsak a mi sikerünk, hanem a családjaink és barátaink közös munkájának eredménye is. Rengeteg időt, energiát és segítséget kaptunk tőlük/tőletek, amiért örökké hálásak leszünk. Az otthonunk minden sarka emlékeztet arra, hogy mennyi szeretet vesz körül minket. Még most is hihetetlen érzés, hogy ez tényleg a miénk.", 
-        image: SeventhImg 
+        image: EightthImg 
     },
     { 
         title: "Cica, a harmadik lakótárs", 
         desc: "Hamarosan beköltözött hozzánk egy kis szőrgombóc is. Egy örökbefogadott cicával bővült a család, akinek azóta is minden nap van valami vicces húzása. A felelősségből is közösen vesszük ki a részünk – ahogy mindig mindenből. És a cica neve mi más is lehetne, mint Móka. Makó Móka.", 
-        image: FifthImg 
+        image: NinthImg
     },
 ];
