@@ -10,13 +10,13 @@
 .invitation-title {
     font-family: 'Dancing Script', cursive;
     padding: 20px;
-    font-size: xxx-large;
+    font-size: xx-large;
     height: 100%;
     color: #b46f00;
 }
 
 .invitation-subtitle {
-    padding: 20px;
+    padding-top: 10px;
     font-size: large;
     height: 100%;
     color: #b46f00;

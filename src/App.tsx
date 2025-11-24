@@ -1,4 +1,5 @@
 import './App.css';
+import { BrideTeam } from './Components/BrideTeam/BrideTeam';
 import { CountDown } from './Components/CountDown/CountDown';
 import { Footer } from './Components/Footer/Footer';
 import { ImageHeader } from './Components/ImageHeader/imageHeader';
@@ -12,6 +13,7 @@ const App: React.FC = () => {
       <ImageHeader />
       <div className="gradient-background-section">
         <CountDown />
+        <BrideTeam />
         <LoveStory />
       </div>
         <Footer />

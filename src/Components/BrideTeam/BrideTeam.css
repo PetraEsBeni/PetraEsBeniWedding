@@ -1,0 +1,80 @@
+/* Container */
+.brideteam-container {
+  width: 100%;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.brideteam-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  color: #b46f00;
+  margin-bottom: 40px;
+}
+
+.brideteam-list {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.brideteam-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.brideteam-item.left {
+  flex-direction: row;
+  text-align: left;
+}
+
+.brideteam-item.right {
+  flex-direction: row-reverse;
+  text-align: left;
+}
+
+.brideteam-image {
+  width: 140px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+}
+
+.brideteam-text {
+  max-width: 500px;
+}
+
+.brideteam-name {
+  font-size: 1.5rem;
+  color: #b46f00;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.brideteam-desc {
+  font-size: 1.1rem;
+  color: #925a00;
+  line-height: 1.5;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .brideteam-item.left,
+  .brideteam-item.right {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .brideteam-image {
+    width: 120px;
+  }
+
+  .brideteam-text {
+    max-width: 100%;
+  }
+}
