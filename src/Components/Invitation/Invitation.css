@@ -16,10 +16,16 @@
 }
 
 .invitation-subtitle {
-    padding: 20px;
+    padding-top: 20px;
     font-size: large;
     height: 100%;
     color: #b46f00;
+}
+
+.together {
+  font-size: 1.4em;
+  font-family: 'Caveat', cursive;
+  color: #b46f00;
 }
 
 .feedback-button {
@@ -27,7 +33,7 @@
     color: white;
     width: 70%;
     max-width: 300px;
-    margin: 12px 20px;
+    margin-top: 40px;
     border-radius: 8px; 
     border: none;
     cursor: pointer;

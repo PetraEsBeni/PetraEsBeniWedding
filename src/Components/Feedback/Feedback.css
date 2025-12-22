@@ -158,7 +158,6 @@ button:disabled {
     color: #3a3838e8;
     text-align: center;
     padding: 50px 20px;
-    background-color: white;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     max-width: 400px;
