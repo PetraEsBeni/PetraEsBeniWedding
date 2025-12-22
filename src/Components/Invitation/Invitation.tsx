@@ -33,7 +33,9 @@ export class Invitation extends React.Component<{}, IState> {
                 <div className="invitation-subtitle">Helyszín</div>
                 <div>Arló, Suvadás liget</div>
                 <div className="invitation-subtitle">Időpont</div>
-                <div>2026. 06. 06. 15:00</div>
+                <div>2026. 06. 06. 15:00</div>              
+                <div className="invitation-subtitle">Az esküvő menetrendje</div>
+                <div>Hamarosan...</div>
                 
                 <button className="feedback-button" onClick={this.toggleFeedback}>
                     {showFeedback ? "Visszajelzés bezárása" : "Visszajelzés"}
