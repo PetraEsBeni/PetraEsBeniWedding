@@ -37,10 +37,6 @@
     transition: color 0.3s ease;
 }
 
-.countdown-title:hover {
-    color: #e79ab5;
-}
-
 .counter-container {
     display: flex;
     justify-content: center;

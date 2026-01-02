@@ -5,6 +5,7 @@ import { ImageHeader } from './Components/ImageHeader/imageHeader';
 import { Invitation } from './Components/Invitation/Invitation';
 import { LoveStory } from './Components/LoveStory/LoveStory';
 import { MenuTitle } from './Components/MenuTitle/menutitle';
+import { Playlist } from './Components/Playlist/Playlist';
 
 const App: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: React.FC = () => {
       <ImageHeader />
       <div className="gradient-background-section">
         <Invitation />
+        <Playlist /> 
         <CountDown />
         <LoveStory />
       </div>
