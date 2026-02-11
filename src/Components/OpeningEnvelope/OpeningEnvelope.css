@@ -113,3 +113,23 @@
       transform: translateY(-5px);
     }
   }
+
+  @media (max-width: 768px) {
+    .envelope-wrapper {
+      background-image: url('../ImageHeader/CarouselPhotos/second.jpg');
+      background-size: 150%;
+      background-position: center 70%;
+      background-repeat: no-repeat;
+    }
+  
+    .envelope-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(240, 232, 224, 0.85); 
+      z-index: -1;
+    }
+  }
