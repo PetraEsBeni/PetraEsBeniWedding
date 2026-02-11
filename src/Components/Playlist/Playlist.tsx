@@ -10,7 +10,7 @@ export class Playlist extends React.Component {
                     Az itt ajánlott dalokat továbbítjuk a DJ-nek,
                     aki ezek stílusa alapján állítja össze az esküvő zenei hangulatát.</div>
                 <a
-                    href="https://open.spotify.com/playlist/2uTZioArmDreH6SdTHO1SP?si=eafa0e017dbf4a29&pt=41529fbb45b24b64d592ef2d761b71d6"
+                    href="https://open.spotify.com/playlist/2uTZioArmDreH6SdTHO1SP?si=dba290f949d34cd6&pt=a648a1e781194f8d995b30654399826e"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="musicLink"
