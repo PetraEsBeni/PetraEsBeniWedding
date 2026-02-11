@@ -11,8 +11,9 @@ const OpeningEnvelope = ({ onOpen }: { onOpen: () => void }) => {
   };
 
   return (
-    <div className={`envelope-wrapper ${isOpen ? 'open' : ''}`} onClick={handleClick}>
-      <div className="envelope">
+    <div className={`envelope-wrapper ${isOpen ? 'open' : ''}`}>
+      <div className="envelope" onClick={handleClick}>
+        <img src="/THELogoBolder.png" alt="Logo" className="envelope-logo" />
         <div className="envelope-text-container">
           <p className="envelope-title">Meghívó</p>
           <p className="click-to-open-text">Kattints a kinyitáshoz!</p>
