@@ -7,7 +7,7 @@ const OpeningEnvelope = ({ onOpen }: { onOpen: () => void }) => {
   const handleClick = () => {
     if (isOpen) return;
     setIsOpen(true);
-    setTimeout(onOpen, 2500); // Match animation duration + transition delay
+    setTimeout(onOpen, 1700);
   };
 
   return (
