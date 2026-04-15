@@ -27,7 +27,6 @@ const App: React.FC = () => {
           <ImageHeader />
           <div className="gradient-background-section">
             <Invitation />
-            <Playlist />
             <CountDown />
             <LoveStory />
           </div>
