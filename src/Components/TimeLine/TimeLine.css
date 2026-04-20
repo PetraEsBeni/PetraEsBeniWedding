@@ -1,0 +1,21 @@
+.timeline {
+    padding: 8px 12px;
+    margin: 0 auto;
+    max-width: 900px;
+    text-align: center;
+    background: transparent
+}
+
+.timeline p {
+    color: #925a00;
+    font-size: 1rem;
+    margin: 8px 0
+}
+
+.timeline-title {
+    font-family: 'Dancing Script', cursive;
+    padding: 20px;
+    font-size: xxx-large;
+    height: 100%;
+    color: #b46f00;
+}

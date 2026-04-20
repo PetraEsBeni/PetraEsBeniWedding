@@ -19,7 +19,6 @@ export class Invitation extends React.Component<{}, IState> {
     }
 
     public render(){
-        const { showFeedback } = this.state;
         return (
             <div className="invitation-container">
                 <div className="invitation-title">Kedves Családunk és Barátaink!</div>
@@ -33,15 +32,8 @@ export class Invitation extends React.Component<{}, IState> {
                 <div className="invitation-subtitle">Helyszín</div>
                 <div>Arló, Suvadás liget</div>
                 <div className="invitation-subtitle">Időpont</div>
-                <div>2026. 06. 06. 15:00</div>              
-                <div className="invitation-subtitle">Az esküvő menetrendje</div>
-                <div>Hamarosan...</div>
+                <div>2026. 06. 06. 15:00</div>
                 
-                <button className="feedback-button" onClick={this.toggleFeedback}>
-                    {showFeedback ? "Visszajelzés bezárása" : "Visszajelzés"}
-                </button>
-
-                {showFeedback && <Feedback />}
             </div>
         )
     }
