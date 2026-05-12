@@ -3,12 +3,14 @@ import "./TimeTable.css";
 
 export class TimeTable extends React.Component {
     private events = [
-        { time: "5:45 - 6:15 P.M.", event: "Ceremony", icon: "💍" },
-        { time: "7:00 - 7:15 P.M.", event: "Sunset Photos", icon: "📷" },
-        { time: "7:35 - 7:45 P.M.", event: "Welcome Toasts", icon: "🥂" },
-        { time: "7:45 - 8:30 P.M.", event: "Dinner", icon: "🍽️" },
-        { time: "8:30 - 9:30 P.M.", event: "Dance", icon: "🎶" },
-        { time: "9:30 - 9:45 P.M.", event: "Cake Cutting", icon: "🎂" },
+        { time: "15:00", event: "Vendégvárás", icon: "🌸" },
+        { time: "16:00", event: "Polgári szertartás", icon: "💍" },
+        { time: "16:40", event: "Pezsgős gratuláció, ajándékok átadása és csoportfotózások", icon: "🥂" },
+        { time: "19:00", event: "Vacsora", icon: "🍽️" },
+        { time: "20:30", event: "Nyitótánc", icon: "🎵" },
+        { time: "23:00", event: "Tortaceremónia", icon: "🎂" },
+        { time: "00:00", event: "Menyecsketánc", icon: "💃" },
+        { time: "00:30-tól", event: "Végtelen buli", icon: "🎉" },
     ];
 
     public render() {

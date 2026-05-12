@@ -9,6 +9,7 @@ import { MenuDetails } from './Components/MenuDetails/MenuDetails';
 import { TimeLine } from './Components/TimeLine/TimeLine';
 import { LoveStory } from './Components/LoveStory/LoveStory';
 import { MenuTitle } from './Components/MenuTitle/menutitle';
+import { TimeTable } from './Components/TimeTable/TimeTable';
 
 const App: React.FC = () => {
   const [isEnvelopeOpen, setIsEnvelopeOpen] = useState(false);
@@ -29,14 +30,14 @@ const App: React.FC = () => {
           <div className="gradient-background-section">
             <CountDown />
             <IconRow />
-            <div id="invitation">
-              <Invitation />
+            <div id="timetable">
+              <TimeTable />
             </div>
             <div id="menu">
               <MenuDetails />
             </div>
-            <div id="timeline">
-              <TimeLine />
+            <div id="invitation">
+              <Invitation />
             </div>
             <div id="lovestory">
               <LoveStory />

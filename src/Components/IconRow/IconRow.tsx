@@ -13,11 +13,12 @@ export const IconRow: React.FC = () => {
   return (
     <div className="icon-row-container">
       <div className="icon-row">
+
         <div className="icon-item">
-          <button className="icon-circle" onClick={() => scrollTo('invitation')} aria-label="Meghívó">
-            <MdOutlineMail size={34} className="icon-svg" />
+          <button className="icon-circle" onClick={() => scrollTo('timetable')} aria-label="Menetrend">
+            <IoCalendarClearOutline size={34} className="icon-svg" />
           </button>
-          <div className="icon-label">Meghívó</div>
+          <div className="icon-label">Menetrend</div>
         </div>
 
         <div className="icon-item">
@@ -28,10 +29,10 @@ export const IconRow: React.FC = () => {
         </div>
 
         <div className="icon-item">
-          <button className="icon-circle" onClick={() => scrollTo('timeline')} aria-label="Menetrend">
-            <IoCalendarClearOutline size={34} className="icon-svg" />
+          <button className="icon-circle" onClick={() => scrollTo('invitation')} aria-label="Meghívó">
+            <MdOutlineMail size={34} className="icon-svg" />
           </button>
-          <div className="icon-label">Menetrend</div>
+          <div className="icon-label">Meghívó</div>
         </div>
 
         <div className="icon-item">

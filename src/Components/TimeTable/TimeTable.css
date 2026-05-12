@@ -19,7 +19,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 30%;
+    width: 50%;
     max-width: 100%;
     margin: 0 auto;
     padding: 20px 0;
@@ -68,16 +68,17 @@
 }
 
 .events-column.leftEvent .event-content-wrapper {
-    text-align: right;
+    text-align: center;
 }
 
 .events-column.rightEvent .event-content-wrapper {
-    text-align: left;
+    text-align: center;
 }
 
 .events-column.dot-column {
     flex-basis: 33.33%;
     z-index: 1;
+    position: relative;
 }
 
 .events-column.empty-column {
@@ -85,35 +86,108 @@
 }
 
 .dot {
-    width: 15px;
-    height: 15px;
-    background-color: #da9325;
+    position: absolute;
+    top: 50%;
+    left: 50.2%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
+    z-index: 3;
+}
+
+.events-row:nth-child(4n + 1) .dot {
+    background-color: #f7d716;
+}
+.events-row:nth-child(4n + 2) .dot {
+    background-color: #e79ab5;
+}
+.events-row:nth-child(4n + 3) .dot {
+    background-color: #6fa8dc;
+}
+.events-row:nth-child(4n + 4) .dot {
+    background-color: #a87dc2;
 }
 
 .timeline-event {
     font-family: 'Dancing Script', cursive;
     color: #925a00;
+    font-size: 1.4rem;
 }
 
 .timeline-icon {
-    font-size: 30px;
+    font-size: 36px;
 }
 
 .timeline-event-name {
     font-family: 'Dancing Script', cursive;
     color: #925a00;
-    font-size: larger;
+    font-size: 1.5rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .timeline {
-        width: 60%;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .timeline::after {
+        left: 80px;
+        transform: none;
+        top: 30px;
+    }
+
+    .events-row {
+        margin-bottom: 28px;
+    }
+
+    .events-column.empty-column {
+        display: none;
+    }
+
+    .events-column.dot-column {
+        flex-basis: 160px;
+        min-width: 160px;
+        max-width: 160px;
+        padding: 0;
+        order: 1;
+        position: relative;
+    }
+
+    .dot {
+        left: 73.2px;
+        transform: translateY(-50%);
+    }
+
+    .events-column.leftEvent,
+    .events-column.rightEvent {
+        order: 2;
+        flex: 1;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .events-column.leftEvent .event-content-wrapper,
+    .events-column.rightEvent .event-content-wrapper {
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .timeline-event {
+        font-size: 1.2rem;
+    }
+
+    .timeline-event-name {
+        font-size: 1.25rem;
+    }
+
+    .timeline-icon {
+        font-size: 28px;
     }
 }
 
-@media (min-width: 601px) and (max-width: 1400px) {
+@media (min-width: 901px) and (max-width: 1400px) {
     .timeline {
-        width: 60%;
+        width: 70%;
     }
 }
