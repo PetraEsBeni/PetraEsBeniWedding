@@ -10,6 +10,11 @@ import { TimeLine } from './Components/TimeLine/TimeLine';
 import { LoveStory } from './Components/LoveStory/LoveStory';
 import { MenuTitle } from './Components/MenuTitle/menutitle';
 import { TimeTable } from './Components/TimeTable/TimeTable';
+import { WeddingVideo } from './Components/WeddingVideo/WeddingVideo';
+import { WeddingHeroPhoto } from './Components/WeddingHeroPhoto/WeddingHeroPhoto';
+import { ThankYou } from './Components/ThankYou/ThankYou';
+import { GalleryLinks } from './Components/GalleryLink/GalleryLink';
+import { WeddingGallery } from './Components/WeddingGalery/WeddingGallery';
 
 const App: React.FC = () => {
   const [isEnvelopeOpen, setIsEnvelopeOpen] = useState(false);
@@ -28,7 +33,7 @@ const App: React.FC = () => {
           <MenuTitle />
           <ImageHeader />
           <div className="gradient-background-section">
-            <CountDown />
+            {/*<CountDown />
             <IconRow />
             <div id="timetable">
               <TimeTable />
@@ -38,12 +43,27 @@ const App: React.FC = () => {
             </div>
             <div id="invitation">
               <Invitation />
+            </div>*/}
+            <div id="thankYou">
+              <ThankYou/>
             </div>
-            <div id="lovestory">
+            <div id="heroPhoto">
+              <WeddingHeroPhoto/>
+            </div>
+            <div id="weddingGalery">
+              <WeddingGallery/>
+            </div>
+            <div id="galleryLink">
+              <GalleryLinks/>
+            </div>
+            <div id="video">
+              <WeddingVideo />
+            </div>
+            {/*<div id="lovestory">
               <LoveStory />
-            </div>
+            </div>*/}
           </div>
-          <Footer />
+         {/* <Footer />*/}
         </>
      {/*} )}*/}
     </div>

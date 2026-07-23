@@ -1,0 +1,58 @@
+.gallery-section {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.gallery-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: xxx-large;
+    color: #b46f00;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.gallery-item {
+    margin-bottom: 15px;
+
+    break-inside: avoid;
+    overflow: hidden;
+    border-radius: 16px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.03);
+}
+
+
+.gallery-grid {
+    column-count: 4;
+    column-gap: 15px;
+
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+    .gallery-grid {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        column-count: 2;
+    }
+}

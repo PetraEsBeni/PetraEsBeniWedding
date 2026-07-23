@@ -1,15 +1,15 @@
-import FirstImg from "./CarouselPhotos/first.jpg";
-import SecondImg from "./CarouselPhotos/second.jpg";
-import ThirdImg from "./CarouselPhotos/third.jpg";
-import FourthImg from "./CarouselPhotos/fourth.jpg";
-import FifthImg from "./CarouselPhotos/fifth.jpg";
-import SixthImg from "./CarouselPhotos/sixth.jpg";
-import SeventhImg from "./CarouselPhotos/seventh.jpg";
-import EighthImg from "./CarouselPhotos/eighth.jpg";
-import NinthImg from "./CarouselPhotos/ninth.jpg";
-import TenthImg from "./CarouselPhotos/tenth.jpg";
-import EleventhImg from "./CarouselPhotos/eleventh.jpg";
-import TwelfthImg from "./CarouselPhotos/twelfth.jpg";
+import FirstImg from "./CarouselWeddingPhotos/first.webp";
+import SecondImg from "./CarouselWeddingPhotos/second.webp";
+import ThirdImg from "./CarouselWeddingPhotos/third.webp";
+import FourthImg from "./CarouselWeddingPhotos/fourth.webp";
+import FifthImg from "./CarouselWeddingPhotos/fifth.webp";
+import SixthImg from "./CarouselWeddingPhotos/sixth.webp";
+import SeventhImg from "./CarouselWeddingPhotos/seventh.webp";
+import EighthImg from "./CarouselWeddingPhotos/eighth.webp";
+import NinthImg from "./CarouselWeddingPhotos/ninth.webp";
+import TenthImg from "./CarouselWeddingPhotos/tenth.webp";
+import EleventhImg from "./CarouselWeddingPhotos/eleventh.webp";
+import TwelfthImg from "./CarouselWeddingPhotos/twelfth.webp";
 
 export const images = [
   {

@@ -13,7 +13,7 @@ export class ImageHeader extends React.Component {
                         alt="Logo"
                         className="header-logo"
                     />
-                    <p className="Osszehazasodunk">Összeházasodunk!</p>
+                    <p className="Osszehazasodunk">Köszönjük, hogy velünk ünnepeltetek a Nagy napunkon!</p>
                 </div>
             </div>
         )

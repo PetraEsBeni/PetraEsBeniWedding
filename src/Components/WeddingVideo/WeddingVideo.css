@@ -1,0 +1,70 @@
+.video-section {
+  width: 100%;
+  padding: 0px 20px 30px 20px;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.video-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: xxx-large;
+  color: #b46f00;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.video-description {
+  max-width: 850px;
+  margin: 0 auto 40px auto;
+
+  color: #925a00;
+  font-size: 1.1rem;
+  line-height: 1.7;
+
+  text-align: center;
+}
+
+.video-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    border: none;
+    display: block;
+}
+
+/* Tablet */
+
+@media (max-width: 1199px) {
+
+  .video-section {
+    padding: 60px 20px;
+  }
+
+  .video-title {
+    font-size: 2.5rem;
+  }
+
+  .video-description {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+    .video-wrapper {
+        border-radius: 8px;
+    }
+
+}

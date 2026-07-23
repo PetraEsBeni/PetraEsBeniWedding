@@ -1,0 +1,48 @@
+.gallery-links-section {
+    padding: 0px 20px 40px 20px;
+    text-align: center;
+}
+
+.gallery-links-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: xxx-large;
+    color: #b46f00;
+    margin-bottom: 20px;
+}
+
+.gallery-links-text {
+    color: #925a00;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.gallery-link-button {
+    display: inline-block;
+
+    padding: 15px 28px;
+
+    background-color: #d4a14d;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
+}
+
+.gallery-link-button:hover {
+    background-color: #b46f00;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+
+    .gallery-links-title {
+        font-size: 2.2rem;
+    }
+
+    .gallery-links-text {
+        font-size: 1rem;
+    }
+
+}

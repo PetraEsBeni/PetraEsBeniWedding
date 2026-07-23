@@ -1,0 +1,40 @@
+.thank-you-container {
+    width: 100%;
+    padding: 30px 20px 30px;
+}
+
+.thank-you-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: xxx-large;
+    color: #b46f00;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.thank-you-text {
+    max-width: 900px;
+    margin: 0 auto;
+
+    text-align: center;
+
+    color: #925a00;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+
+    .thank-you-container {
+        padding: 50px 15px 30px;
+    }
+
+    .thank-you-title {
+        font-size: 2.2rem;
+    }
+
+    .thank-you-text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+}

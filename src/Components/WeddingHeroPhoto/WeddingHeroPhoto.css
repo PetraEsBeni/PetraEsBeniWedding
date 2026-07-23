@@ -1,0 +1,32 @@
+.hero-photo-container {
+    width: 100%;
+
+    margin: 0 auto 50px auto;
+
+    overflow: hidden;
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hero-photo {
+    width: 100%;
+    display: block;
+
+    aspect-ratio: 3 / 1;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+
+    .hero-photo-container {
+        border-radius: 12px;
+        margin-bottom: 30px;
+    }
+
+    .hero-photo {
+        aspect-ratio: 2 / 1;
+    }
+
+}
