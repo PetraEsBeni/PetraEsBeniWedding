@@ -50,15 +50,15 @@ const App: React.FC = () => {
             <div id="heroPhoto">
               <WeddingHeroPhoto/>
             </div>
-            <div id="weddingGalery">
+            {/*<div id="weddingGalery">
               <WeddingGallery/>
             </div>
-            <div id="galleryLink">
+           <div id="galleryLink">
               <GalleryLinks/>
             </div>
             <div id="video">
               <WeddingVideo />
-            </div>
+            </div>*/}
             {/*<div id="lovestory">
               <LoveStory />
             </div>*/}
