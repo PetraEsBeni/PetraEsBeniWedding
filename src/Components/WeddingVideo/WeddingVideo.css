@@ -30,16 +30,24 @@
     max-width: 1000px;
     margin: 0 auto;
 
+    position: relative;
+
+    aspect-ratio: 16 / 9;
+
     overflow: hidden;
     border-radius: 12px;
 }
 
 .video-wrapper iframe {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
     width: 100%;
-    aspect-ratio: 16 / 9;
+    height: 100%;
 
     border: none;
-    display: block;
 }
 
 /* Tablet */
