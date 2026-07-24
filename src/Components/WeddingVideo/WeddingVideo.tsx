@@ -20,6 +20,7 @@ export class WeddingVideo extends React.Component {
             controls
             playsInline
             preload="metadata"
+            poster="https://petraesbeniweddingvideo.netlify.app/thumbnail.webp"
           >
             <source src="https://petraesbeniweddingvideo.netlify.app/WeddingVideo.mp4" type="video/mp4" />
             A böngésződ nem támogatja a videó lejátszását.
