@@ -16,12 +16,14 @@ export class WeddingVideo extends React.Component {
         </div>
 
         <div className="video-wrapper">
-          <iframe
-                src="https://drive.google.com/file/d/1KfLVpvvT85lIkpHNGt-AT1ie84m_q0L-/preview"
-                title="Esküvői videó"
-                allow="autoplay"
-                allowFullScreen
-            />
+          <video
+            controls
+            playsInline
+            preload="metadata"
+          >
+            <source src="https://petraesbeniweddingvideo.netlify.app/WeddingVideo.mp4" type="video/mp4" />
+            A böngésződ nem támogatja a videó lejátszását.
+          </video>
         </div>
 
       </div>
